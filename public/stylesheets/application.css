@@ -3,7 +3,7 @@
 html, body {
   position: relative;
   background: #000 url(../images/main_bg.jpg) center top no-repeat;
-	font-family: "Myriad Pro", Helvetica, Arial, Tahoma, sans-serif;;
+	font-family: Helvetica, Arial, Tahoma, sans-serif;;
   color: #fff;
   font-size: 85%;
 	text-align: center;
