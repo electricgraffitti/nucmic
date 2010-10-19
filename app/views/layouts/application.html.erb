@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<%= render :partial => "layouts/headmeta" %>
+</head>
+<body class="yui-skin-sam">
+  
+  <div id="wrapper">
+    <%= render :partial => 'layouts/flash', :locals => {:flash => flash} %>
+    <div id="hd">
+	    <%= render :partial => 'layouts/header_main' %>
+  	</div>
+  	<div id="bd">
+  	  <div id="main_content"> <%# 728px %>
+  	    <%= yield %>
+  	  </div>
+  	</div>
+  	<div id="footer">
+	    <%= render :partial => "layouts/footer" %>
+  	</div>
+	</div>
+  <%# javascripts %>
+  <%= render :partial => "layouts/scripts" %>
+</body>
+</html>
