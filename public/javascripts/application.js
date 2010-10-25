@@ -90,14 +90,27 @@ var nav = {
 
 var app = {
 	
+	setBodyHeight: function() {
+	 var $bd = $('#bd');
+	 var h = $(window).height() - 158;
+	 var w = $(window).width();
+	 $bd.css({width:w,height:h});
+	},
+	
+	dynamicBodyHeight: function() {
+	  var $bd = $('#bd');
+	  $(window).resize(function() {
+	    $bd.css({width:$(this).width() ,height:$(this).height() - 158 });
+	  });
+	 
+	},
+	
 	loadCoreFunctions: function() {
 		// nav.setNavHover();
 		flash.injectFlashBox();
 		flash.setFlash();
+		app.setBodyHeight();
+		app.dynamicBodyHeight();
 	}
 	
 };
-
-$(document).ready(function() {
-	app.loadCoreFunctions();
-});

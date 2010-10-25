@@ -1,1 +1,49 @@
-nucleus
+<div id="pages">
+  <div id="home_page" class="sub_page">
+    <h2>Home Page</h2>
+  </div>
+  <div id="micro_elements" class="sub_page">
+    <h2>Elements Page</h2>
+  </div>
+  <div id="contact_form" class="sub_page">
+    <h2>Contact Page</h2>
+  </div>
+</div>
+
+<div id="elements">
+  <div id="row1">
+    <%= render :partial => 'row1_elements' %>
+  </div>
+  
+  <div id="row2">
+    <%= render :partial => 'row2_elements' %>
+  </div>
+  
+  <div id="row3">
+    <%= render :partial => 'row3_elements' %>
+  </div>
+  
+  <div id="row4">
+    <%= render :partial => 'row4_elements' %>
+  </div>
+  
+  <div id="row5">
+    <%= render :partial => 'row5_elements' %>
+  </div>
+  
+  <div id="row6">
+    <%= render :partial => 'row6_elements' %>
+  </div>
+  <div id="row7">
+    <%= render :partial => 'row7_elements' %>
+  </div>
+  
+</div>
+
+<% content_for :javascripts do %>
+  <script type="text/javascript" charset="utf-8">
+    $(document).ready(function() {
+      app.loadCoreFunctions();
+    });
+  </script>
+<% end %>
