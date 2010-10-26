@@ -100,7 +100,7 @@ var app = {
 	dynamicBodyHeight: function() {
 	  var $bd = $('#bd');
 	  $(window).resize(function() {
-	    $bd.css({width:$(this).width() ,height:$(this).height() - 158 });
+	    $bd.css({width:$(this).width(), height:$(this).height() - 158 });
 	  });
 	 
 	},
