@@ -88,6 +88,60 @@ var nav = {
 	
 };
 
+var scroll = {
+  
+  topNavToggle: function() {
+    var $tnTrigger = $('#top_nav a.page_trigger');
+    
+    $tnTrigger.click(function(e) {
+      var pagehref = $(this).attr("href");
+      e.preventDefault();
+      $('#bd').scrollTo($(pagehref), 800);
+    });
+    
+  },
+  
+  boxNavToggle: function() {
+    var $bnTrigger = $('#elements .content_right a');
+    
+    $bnTrigger.click(function(e) {
+      var boxhref = $(this).attr("href");
+      e.preventDefault();
+      $('#bd').scrollTo($(boxhref), 800);
+    });
+    
+  },
+  
+  subNavToggle: function() {
+    var $snTrigger = $('#sub_nav li a');
+    
+    $snTrigger.click(function(e) {
+      var subhref = $(this).attr("href");
+      e.preventDefault();
+      $('#bd').scrollTo($(subhref), 800);
+    });
+    
+  },
+  
+  iconNavToggle: function() {
+    var $iconTrigger = $('#icon_nav li a');
+    
+    $iconTrigger.click(function(e) {
+      var panelhref = $(this).attr("href");
+      e.preventDefault();
+      $('#bd').scrollTo($(panelhref), 800);
+    });
+  },
+  
+  loadTriggers: function() {
+    scroll.iconNavToggle();
+    scroll.topNavToggle(); 
+    scroll.boxNavToggle();
+    scroll.subNavToggle();
+  }
+  
+};
+
 var app = {
 	
 	setBodyHeight: function() {
@@ -111,6 +165,7 @@ var app = {
 		flash.setFlash();
 		app.setBodyHeight();
 		app.dynamicBodyHeight();
+		scroll.loadTriggers();
 	}
 	
 };

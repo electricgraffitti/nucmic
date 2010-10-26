@@ -3,7 +3,7 @@
 html, body {
   position: relative;
   background: #1a1a1a;
-	font-family: Arial, Helvetica, Tahoma, sans-serif;;
+	font-family: Helvetica, Arial, Tahoma, sans-serif;;
   color: #fff;
   font-size: 85%;
   overflow: hidden;
@@ -30,6 +30,9 @@ a:hover {
 
 .clear {
   clear: both;
+}
+.black {
+  color: #000;
 }
 
 /***Firefox dotted line tweak***/
@@ -193,17 +196,30 @@ label.error {
   width: 500px;*/
   min-width: 1024px;
   min-height: 768px;
-  overflow: scroll;
+  overflow: hidden;
+  margin: 15px 0px 0px 15px;
 }
 #main_content {
   width: 6704px;
   height: 3605px;
 }
+
+/*********************************************************/
+/******************PAGES*********************************/
+
 #pages {
   width: 1024px;
   height: 3605px;
   margin-right: 15px;
 }
+#pages .sub_page {
+  width: 1024px;
+  height: 610px;
+
+}
+/*********************************************************/
+/******************ELEMENTS******************************/
+
 #elements {
   width: 5665px;
   height: 3605px;
@@ -214,7 +230,6 @@ label.error {
   width: 500px;
   height: 500px;
   margin: 15px 15px 0px 0px;
-  background: #000;
   text-align: left;
 }
 #elements .element h2 {
@@ -230,47 +245,43 @@ label.error {
   color: #fff;
   margin-left: 66px;
 }
-#pages .sub_page {
-  width: 1024px;
-  height: 595px;
-  padding-top: 15px;
-}
-
-/*********************************************************/
-/******************PAGES*********************************/
-
-/*********************************************************/
-/******************ELEMENTS******************************/
-
 #elements .element.green {
+  background: #000;
   color: #5bab46;
 }
 #elements .element.solid_green {
   background: #5bab46;
 }
 #elements .element.red {
+  background: #000;
   color: #d93b27;
 }
 #elements .element.solid_red {
   background: #d93b27;
 }
 #elements .element.blue {
+  background: #000;
   color: #398dcc;
 }
 #elements .element.solid_blue {
   background: #398dcc;
 }
 #elements .element.yellow {
+  background: #000;
   color: #f7b219;
 }
 #elements .element.solid_yellow {
   background: #f7b219;
 }
 #elements .element.grey {
+  background: #000;
   color: #808080;
 }
 #elements .element.solid_grey {
   background: #808080;
+}
+#elements .element.solid_grey h2 {
+  color: #000;
 }
 #elements .element.white {
   color: #fff;
@@ -292,6 +303,78 @@ label.error {
 }
 #elements .element.solid_hci_purple {
  background: #78496a; 
+}
+.graphic_top {
+  position: relative;
+  float: left;
+  width: 500px;
+  height: 250px;
+}
+.content_bottom {
+  position: relative;
+  float: left;
+  width: 500px;
+  height: 250px;
+}
+.content_bottom h3 {
+  position: relative;
+  float: left;
+  width: 500px;
+  height: 73px;
+  text-indent: -3333em;
+}
+.solid_green .content_bottom h3 {
+  background: url(../images/green_box_header.png) 0px 0px no-repeat;
+}
+.solid_red .content_bottom h3 {
+/*  background: url(../images/red_box_header.png) 0px 0px no-repeat;
+*/  background: url(../images/green_box_header.png) 0px 0px no-repeat;
+}
+.solid_blue .content_bottom h3 {
+/*  background: url(../images/blue_box_header.png) 0px 0px no-repeat;
+*/  background: url(../images/green_box_header.png) 0px 0px no-repeat;
+}
+.solid_yellow .content_bottom h3 {
+/*  background: url(../images/yellow_box_header.png) 0px 0px no-repeat;
+*/  background: url(../images/green_box_header.png) 0px 0px no-repeat;
+}
+.solid_grey .content_bottom h3 {
+/*  background: url(../images/grey_box_header.png) 0px 0px no-repeat;
+*/  background: url(../images/green_box_header.png) 0px 0px no-repeat;
+}
+.content_left {
+  position: relative;
+  float: left;
+  width: 249px;
+  height: 162px;
+  margin-bottom: 15px;
+  border-right: 1px solid #fff;
+  padding-left: 40px;
+  padding-right: 10px;
+}
+#elements .content_left p {
+  margin: 0px;
+  font-size: 13px;
+  color: #000;
+}
+.content_right {
+  position: relative;
+  float: left;
+  width: 180px;
+  height: 162px;
+  margin-bottom: 15px;
+  padding-left: 15px;
+}
+.content_right ul li {
+  margin-bottom: 13px;
+}
+.content_right ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+.content_right ul li a:hover {
+  color: #0088cc;
+  text-decoration: underline;
 }
 
 
