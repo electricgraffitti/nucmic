@@ -17,8 +17,12 @@ html, body {
 	min-height: 768px;
 	overflow: hidden;
 }
+.hidden {
+  display: none;
+}
 a {
   color: #fff;
+  text-decoration: none;
 }
 a:hover {
   color: #0088cc;
@@ -33,6 +37,9 @@ a:hover {
 }
 .black {
   color: #000;
+}
+.green {
+  color: #5bab46;
 }
 
 /***Firefox dotted line tweak***/
@@ -88,6 +95,18 @@ label.error {
   margin-top: 20px;
   margin-right: 30px;
 }
+#top_nav a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+#top_nav a span {
+  color: #000;
+}
+#top_nav a:hover span, #top_nav a:hover span.active {
+  display: inline;
+  color: #5bab46;
+}
+
 #logo {
   position: absolute;
   width: 200px;
@@ -108,7 +127,7 @@ label.error {
   width: 100%;
 }
 #icon_nav ul {
-  width: 726px;
+  width: 847px;
 }
 #icon_nav ul li {
   width: 120px;
@@ -156,6 +175,12 @@ label.error {
 }
 #icon_nav ul li#nav6 a:hover {
   background: transparent url(../images/icon_nav.png) -605px -69px no-repeat;
+}
+#icon_nav ul li#nav7 a {
+  background: transparent url(../images/icon_nav.png) -726px 0px no-repeat;
+}
+#icon_nav ul li#nav7 a:hover {
+  background: transparent url(../images/icon_nav.png) -726px -69px no-repeat;
 }
 #sub_nav {
   background: transparent url(../images/green_sub_nav_bg.png) 0px 0px repeat-x;
@@ -272,6 +297,13 @@ label.error {
 }
 #elements .element.solid_yellow {
   background: #f7b219;
+}
+#elements .element.solid_black {
+  background: #000;
+  color: #fff;
+}
+#elements .element.solid_black p {
+  color: #fff;
 }
 #elements .element.grey {
   background: #000;
