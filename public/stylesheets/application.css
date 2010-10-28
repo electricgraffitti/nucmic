@@ -25,7 +25,6 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: #0088cc;
  	text-decoration: underline;
 }
 .hide_text {
@@ -143,71 +142,75 @@ label.error {
 #icon_nav ul li#nav1 a {
   background: transparent url(../images/icon_nav.png) 0px 0px no-repeat;
 }
-#icon_nav ul li#nav1 a:hover {
+#icon_nav ul li#nav1 a:hover, #icon_nav ul li#nav1 a.active {
   background: transparent url(../images/icon_nav.png) 0px -69px no-repeat;
 }
 #icon_nav ul li#nav2 a {
   background: transparent url(../images/icon_nav.png) -121px 0px no-repeat;
 }
-#icon_nav ul li#nav2 a:hover {
+#icon_nav ul li#nav2 a:hover, #icon_nav ul li#nav2 a.active {
   background: transparent url(../images/icon_nav.png) -121px -69px no-repeat;
 }
 #icon_nav ul li#nav3 a {
   background: transparent url(../images/icon_nav.png) -242px 0px no-repeat;
 }
-#icon_nav ul li#nav3 a:hover {
+#icon_nav ul li#nav3 a:hover, #icon_nav ul li#nav3 a.active {
   background: transparent url(../images/icon_nav.png) -242px -69px no-repeat;
 }
 #icon_nav ul li#nav4 a {
   background: transparent url(../images/icon_nav.png) -363px 0px no-repeat;
 }
-#icon_nav ul li#nav4 a:hover {
+#icon_nav ul li#nav4 a:hover, #icon_nav ul li#nav4 a.active {
   background: transparent url(../images/icon_nav.png) -363px -69px no-repeat;
 }
 #icon_nav ul li#nav5 a {
   background: transparent url(../images/icon_nav.png) -484px 0px no-repeat;
 }
-#icon_nav ul li#nav5 a:hover {
+#icon_nav ul li#nav5 a:hover, #icon_nav ul li#nav5 a.active {
   background: transparent url(../images/icon_nav.png) -484px -69px no-repeat;
 }
 #icon_nav ul li#nav6 a {
   background: transparent url(../images/icon_nav.png) -605px 0px no-repeat;
 }
-#icon_nav ul li#nav6 a:hover {
+#icon_nav ul li#nav6 a:hover, #icon_nav ul li#nav6 a.active {
   background: transparent url(../images/icon_nav.png) -605px -69px no-repeat;
 }
 #icon_nav ul li#nav7 a {
   background: transparent url(../images/icon_nav.png) -726px 0px no-repeat;
 }
-#icon_nav ul li#nav7 a:hover {
+#icon_nav ul li#nav7 a:hover, #icon_nav ul li#nav7 a.active {
   background: transparent url(../images/icon_nav.png) -726px -69px no-repeat;
 }
 #sub_nav {
-  background: transparent url(../images/green_sub_nav_bg.png) 0px 0px repeat-x;
   height: 29px;
   width: 100%;
 }
+#sub_nav.green {
+   background: transparent url(../images/green_sub_nav_bg.png) 0px 0px repeat-x; 
+}
+#sub_nav.red {
+   background: transparent url(../images/red_sub_nav_bg.png) 0px 0px repeat-x; 
+}
+#sub_nav.blue {
+   background: transparent url(../images/blue_sub_nav_bg.png) 0px 0px repeat-x; 
+}
+#sub_nav.yellow {
+   background: transparent url(../images/yellow_sub_nav_bg.png) 0px 0px repeat-x; 
+}
+#sub_nav.grey {
+   background: transparent url(../images/grey_sub_nav_bg.png) 0px 0px repeat-x; 
+}
+#sub_nav.white {
+   background: transparent url(../images/white_sub_nav_bg.png) 0px 0px repeat-x; 
+}
+#sub_nav.black {
+   background: transparent url(../images/black_sub_nav_bg.png) 0px 0px repeat-x; 
+}
+
+
 #sub_nav ul li a {
   display: block;
   margin: 6px 52px 0 0;
-}
-#sub_nav.green {
-  background: transparent url(../images/green_sub_nav_bg.png) 0px 0px repeat-x;
-}
-#sub_nav.red {
-  background: transparent url(../images/red_sub_nav_bg.png) 0px 0px repeat-x;
-}
-#sub_nav.blue {
-  background: transparent url(../images/blue_sub_nav_bg.png) 0px 0px repeat-x;
-}
-#sub_nav.yellow {
-  background: transparent url(../images/yellow_sub_nav_bg.png) 0px 0px repeat-x;
-}
-#sub_nav.grey {
-  background: transparent url(../images/grey_sub_nav_bg.png) 0px 0px repeat-x;
-}
-#sub_nav.white {
-  background: transparent url(../images/white_sub_nav_bg.png) 0px 0px repeat-x;
 }
 
 /*********************************************************/

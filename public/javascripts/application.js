@@ -133,11 +133,34 @@ var scroll = {
     });
   },
   
+  setSubNavColor: function() {
+    var $iconNavTriggers = $('#icon_nav ul li a');
+    
+    var $subNav = $('#sub_nav');
+    
+    $iconNavTriggers.click(function(e) {
+      e.preventDefault();
+      var colorChip = $(this).attr('trigger_color');
+      var $subNavList = $subNav.children('ul.' + colorChip);
+      $(this).parents('#icon_nav').children('a').removeClass('active');
+      $(this).addClass('active');
+      $subNav.removeClass();
+      $subNav.addClass(colorChip);
+      $subNav.children('ul').hide();
+      $subNavList.show();
+      
+    });
+    
+    
+    
+  },
+  
   loadTriggers: function() {
     scroll.iconNavToggle();
     scroll.topNavToggle(); 
     scroll.boxNavToggle();
     scroll.subNavToggle();
+    scroll.setSubNavColor();
   }
   
 };
