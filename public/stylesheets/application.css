@@ -207,7 +207,9 @@ label.error {
    background: transparent url(../images/black_sub_nav_bg.png) 0px 0px repeat-x; 
 }
 
-
+#sub_nav ul {
+  margin-top: 2px;
+}
 #sub_nav ul li a {
   display: block;
   margin: 6px 52px 0 0;
@@ -362,20 +364,24 @@ label.error {
   background: url(../images/green_box_header.png) 0px 0px no-repeat;
 }
 .solid_red .content_bottom h3 {
-/*  background: url(../images/red_box_header.png) 0px 0px no-repeat;
-*/  background: url(../images/green_box_header.png) 0px 0px no-repeat;
+  background: url(../images/red_box_header.png) 0px 0px no-repeat;
+/*  background: url(../images/green_box_header.png) 0px 0px no-repeat;*/
 }
 .solid_blue .content_bottom h3 {
-/*  background: url(../images/blue_box_header.png) 0px 0px no-repeat;
-*/  background: url(../images/green_box_header.png) 0px 0px no-repeat;
+  background: url(../images/blue_box_header.png) 0px 0px no-repeat;
+/*  background: url(../images/green_box_header.png) 0px 0px no-repeat;*/
 }
 .solid_yellow .content_bottom h3 {
-/*  background: url(../images/yellow_box_header.png) 0px 0px no-repeat;
-*/  background: url(../images/green_box_header.png) 0px 0px no-repeat;
+  background: url(../images/yellow_box_header.png) 0px 0px no-repeat;
+/*  background: url(../images/green_box_header.png) 0px 0px no-repeat;*/
 }
 .solid_grey .content_bottom h3 {
-/*  background: url(../images/grey_box_header.png) 0px 0px no-repeat;
-*/  background: url(../images/green_box_header.png) 0px 0px no-repeat;
+  background: url(../images/grey_box_header.png) 0px 0px no-repeat;
+/*  background: url(../images/green_box_header.png) 0px 0px no-repeat;*/
+}
+.solid_black .content_bottom h3 {
+  background: url(../images/black_box_header.png) 0px 0px no-repeat;
+/*  background: url(../images/green_box_header.png) 0px 0px no-repeat;*/
 }
 .content_left {
   position: relative;
