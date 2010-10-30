@@ -201,10 +201,13 @@ label.error {
    background: transparent url(../images/grey_sub_nav_bg.png) 0px 0px repeat-x; 
 }
 #sub_nav.white {
-   background: transparent url(../images/white_sub_nav_bg.png) 0px 0px repeat-x; 
+   background: transparent url(../images/white_sub_nav_bg.png) 0px 0px repeat-x;    
 }
 #sub_nav.black {
-   background: transparent url(../images/black_sub_nav_bg.png) 0px 0px repeat-x; 
+   background: transparent url(../images/white_sub_nav_bg.png) 0px 0px repeat-x; 
+}
+#sub_nav.white a, #sub_nav.black a {
+  color: #000;
 }
 
 #sub_nav ul {
@@ -261,6 +264,111 @@ label.error {
   height: 500px;
   margin: 15px 15px 0px 0px;
   text-align: left;
+}
+#elements .element .element_front {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 500px;
+  height: 500px;
+  text-align: left;
+  background: #000;
+}
+#elements .element .element_back {
+  background: #fff;
+  display: none;
+  color: #333;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  float: left;
+}
+#elements .element.flipped .element_front h3 {
+  background: none repeat scroll 0 0 transparent;
+  font-size:20px;
+  height:53px;
+  margin-top:20px;
+  text-align:center;
+  text-indent:0;
+}
+/* ======================================================== */
+/* = FLIPPED COLOR STYLES                                 = */
+/* ======================================================== */
+#elements .element.flipped .element_front h3 span {
+  font-weight: bold;
+  font-size: 40px;
+}
+#elements .element.flipped .element_front .content_left p {
+  color: #666;
+}
+#elements .element.green.flipped .element_front h3 {
+  color: #5bab46;
+}
+#elements .element.red.flipped .element_front h3 {
+  color: #d93b27;
+}
+#elements .element.blue.flipped .element_front h3 {
+  color: #398dcc;
+}
+#elements .element.yellow.flipped .element_front h3 {
+  color: #f7b219;
+}
+#elements .element.grey.flipped .element_front h3 {
+  color: #808080;
+} 
+#elements .element.green.flipped .content_right a {
+  color: #5bab46;
+}
+#elements .element.green.flipped .content_right a:hover {
+  color: #666;
+}
+#elements .element.red.flipped .content_right a {
+  color: #d93b27;
+}
+#elements .element.red.flipped .content_right a:hover {
+  color: #666;
+}
+#elements .element.blue.flipped .content_right a {
+  color: #398dcc;
+}
+#elements .element.blue.flipped .content_right a:hover {
+  color: #666;
+}
+#elements .element.yellow.flipped .content_right a {
+  color: #f7b219;
+}
+#elements .element.yellow.flipped .content_right a:hover {
+  color: #666;
+}
+#elements .element.grey.flipped .content_right a {
+  color: #fff;
+}
+#elements .element.grey.flipped .content_right a:hover {
+  color: #666;
+}
+#elements .element.black.flipped .content_right a {
+  color: #fff;
+}
+#elements .element.black.flipped .content_right a:hover {
+  color: #666;
+}
+#elements .element.green.flipped .content_left {
+  border-right: 1px solid #5bab46;
+}
+#elements .element.red.flipped .content_left {
+  border-right: 1px solid #d93b27;
+}
+#elements .element.blue.flipped .content_left {
+  border-right: 1px solid #398dcc;
+}
+#elements .element.yellow.flipped .content_left {
+  border-right: 1px solid #f7b219;
+}
+#elements .element.grey.flipped .content_left {
+  border-right: 1px solid #fff;
+}
+#elements .element.black.flipped .content_left {
+  border-right: 1px solid #fff;
 }
 #elements .element h2 {
   font-size:200px;

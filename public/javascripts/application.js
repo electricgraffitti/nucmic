@@ -142,7 +142,7 @@ var scroll = {
       e.preventDefault();
       var colorChip = $(this).attr('trigger_color');
       var $subNavList = $subNav.children('ul.' + colorChip);
-      $(this).parents('#icon_nav').children('a').removeClass('active');
+      $(this).parents('#icon_nav').find('a').removeClass('active');
       $(this).addClass('active');
       $subNav.removeClass();
       $subNav.addClass(colorChip);
@@ -164,6 +164,38 @@ var scroll = {
   }
   
 };
+
+var flip = {
+  
+  flipElement: function() {
+    var $element = $('.element_front');
+    $element.click(function() {
+      var $parentBox = $(this).parent('.element');
+      var $flipContent = $(this).siblings('.element_back');
+      if ($parentBox.hasClass('flipped')) {
+        $(this).revertFlip();
+        $parentBox.removeClass('flipped'); 
+      } else {
+        $(this).flip({
+          direction:'lr',
+          speed:350,
+          content:$flipContent,
+          color:'#ffffff'
+        });
+        $parentBox.addClass('flipped');
+      }
+
+    });
+  },
+  
+  loadFlips: function() {
+   flip.flipElement();
+   
+    
+  }
+  
+};
+
 
 var app = {
 	
@@ -189,6 +221,7 @@ var app = {
 		app.setBodyHeight();
 		app.dynamicBodyHeight();
 		scroll.loadTriggers();
+		flip.loadFlips();
 	}
 	
 };
