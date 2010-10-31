@@ -313,8 +313,8 @@ label.error {
 #elements .element.yellow.flipped .element_front h3 {
   color: #f7b219;
 }
-#elements .element.grey.flipped .element_front h3 {
-  color: #808080;
+#elements .element.solid_grey.flipped .element_front h3 {
+  color: #000;
 } 
 #elements .element.green.flipped .content_right a {
   color: #5bab46;
@@ -340,8 +340,8 @@ label.error {
 #elements .element.yellow.flipped .content_right a:hover {
   color: #666;
 }
-#elements .element.grey.flipped .content_right a {
-  color: #fff;
+#elements .element.solid_grey.flipped .content_right a {
+  color: #000;
 }
 #elements .element.grey.flipped .content_right a:hover {
   color: #666;
@@ -364,8 +364,8 @@ label.error {
 #elements .element.yellow.flipped .content_left {
   border-right: 1px solid #f7b219;
 }
-#elements .element.grey.flipped .content_left {
-  border-right: 1px solid #fff;
+#elements .element.solid_grey.flipped .content_left {
+  border-right: 1px solid #808080;
 }
 #elements .element.black.flipped .content_left {
   border-right: 1px solid #fff;
@@ -423,7 +423,10 @@ label.error {
   color: #808080;
 }
 #elements .element.solid_grey {
-  background: #808080;
+  background: #1a1a1a;
+}
+#elements .element.solid_grey .element_front, #elements #e57 {
+  background: #808080;  
 }
 #elements .element.solid_grey h2 {
   color: #000;
