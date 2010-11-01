@@ -334,9 +334,6 @@ label.error {
 #elements .element.blue.flipped .content_right a:hover {
   color: #666;
 }
-#elements .element.solid_hci_green.flipped {
-  background: #1a1a1a;
-}
 #elements .element.yellow.flipped .content_right a {
   color: #f7b219;
 }
