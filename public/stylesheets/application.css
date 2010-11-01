@@ -488,22 +488,25 @@ label.error {
 #elements .element.white {
   color: #fff;
 }
-#elements .element.solid_hci_green .element_front, #elements #e9 {
+#elements .element.solid_hci_green {
+  background: #1a1a1a;
+}
+#elements .element.solid_hci_green .element_front {
  background: #00853e; 
 }
-#elements .element.solid_hci_red .element_front, #elements #e31 {
+#elements .element.solid_hci_red .element_front {
  background: #98012e; 
 }
-#elements .element.solid_hci_blue .element_front, #elements #e20 {
+#elements .element.solid_hci_blue .element_front {
  background: #009fc3; 
 }
-#elements .element.solid_hci_yellow .element_front, #elements #e21 {
+#elements .element.solid_hci_yellow .element_front {
  background: #e4b43a; 
 }
-#elements .element.solid_hci_dark_blue .element_front, #elements #e32 {
+#elements .element.solid_hci_dark_blue .element_front {
  background: #00467f; 
 }
-#elements .element.solid_hci_purple .element_front, #elements #e43 {
+#elements .element.solid_hci_purple .element_front {
  background: #78496a; 
 }
 .graphic_top {
