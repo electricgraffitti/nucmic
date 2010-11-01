@@ -12,6 +12,7 @@
 :domain: get-nucleus.com
 :domain_aliases:
   - www.get-nucleus.com
+  - micro.get-nucleus.com
 
 :repository: git@github.com:electricgraffitti/nucmic.git
 :branch: master

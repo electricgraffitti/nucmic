@@ -1,1 +1,1 @@
-server 'yourapp.com', :app, :web, :db, :primary => true
+server 'hcirack', :app, :web, :db, :primary => true
