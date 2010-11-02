@@ -1,30 +1,18 @@
-      <div class="element_front">
-        <h2>Ct</h2>
-        <p>Clinical Touch</p>
-      </div>
-      <div class="element_back">
-        <div class="graphic_top">
-          <%= image_tag("/images/green_ct_icon.png", :alt => "Clinical Touch") %>
-        </div>
-        <div class="content_bottom">
-          <h3><span>Ct</span> Clinical Touch</h3>
-          <div class="content_left">
-            <p>
-              Only HCI brings the power of clinical validation &mdash; medical, coding, and investigative expertise &mdash; to each of our payment integrity solutions. Our process delivers you greater savings and unmatched payment accuracy.
-            </p>
-          </div>
-          <div class="content_right">
-            <ul>
-              <li>
-                <%= link_to raw("Watch Video &raquo;"), "#video" %>
-              </li>
-              <li>
-                <%= link_to raw("Request a demo &raquo;"), "#contact_form" %>
-              </li>
-              <li>
-                <%= link_to raw("Visit HealthCare Insight &raquo;"), "http://www.hcinsight.com" %>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
+<div class="element_front">
+  <h2>Ct</h2>
+  <p>Clinical Touch</p>
+</div>
+<div class="element_back">
+  <div class="graphic_top">
+    <%= image_tag("/images/green_ct_icon.png", :alt => "Clinical Touch") %>
+  </div>
+  <div class="content_bottom">
+    <h3><span>Ct</span> Clinical Touch</h3>
+    <div class="content_left">
+      <p>
+        Only HCI brings the power of clinical validation &mdash; medical, coding, and investigative expertise &mdash; to each of our payment integrity solutions. Our process delivers you greater savings and unmatched payment accuracy.
+      </p>
+    </div>
+      <%= render :partial => 'flipped_box_links' %>
+  </div>
+</div>

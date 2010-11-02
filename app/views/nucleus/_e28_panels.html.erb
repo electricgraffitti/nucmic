@@ -13,18 +13,6 @@
         You’ll never be left in the dark with the Nucleus Help Center. Providing new ways to navigate the user experience, you can chat online with our support team, watch video tutorials and visit HCI U. With Nucleus, help is only a click away.
       </p>
     </div>
-    <div class="content_right">
-      <ul>
-        <li>
-          <%= link_to raw("Watch Video &raquo;"), "#video" %>
-        </li>
-        <li>
-          <%= link_to raw("Request a demo &raquo;"), "#contact_form" %>
-        </li>
-        <li>
-          <%= link_to raw("Visit HealthCare Insight &raquo;"), "http://www.hcinsight.com" %>
-        </li>
-      </ul>
-    </div>
+      <%= render :partial => 'flipped_box_links' %>
   </div>
 </div>
