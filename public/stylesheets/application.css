@@ -647,6 +647,15 @@ label.error {
 	border-left: 5px solid #666;
 	background: #000;
 }
+#micro_elements .micro_element_row .micro_element_box a.micro_link {
+	position: absolute;
+	display: block;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	text-indent: -3000em;
+}
 #micro_elements .micro_element_row .micro_element_box h3 {
 	font-size:30px;
 	font-weight:bold;

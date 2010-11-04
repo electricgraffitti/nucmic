@@ -162,6 +162,16 @@ var scroll = {
 		});
 		
 	},
+	
+	microTriggers: function() {
+		var $microLink = $('.micro_link');
+		
+		$microLink.click(function(e) {
+			var pagehref = $(this).attr("href");
+			e.preventDefault();
+			$('#bd').scrollTo($(pagehref), 800);
+		});
+	},
 
   loadTriggers: function() {
     scroll.iconNavToggle();
@@ -170,6 +180,7 @@ var scroll = {
     scroll.subNavToggle();
     scroll.setSubNavColor();
 		scroll.homeNavToggle();
+		scroll.microTriggers();
   }
   
 };
