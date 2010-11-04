@@ -1,5 +1,9 @@
 /*********************************************************/
 /******************BASE STYLES****************************/
+@font-face {
+	font-family: Gotham-Rounded;
+	src: url('/fonts/GothamRnd-Book.otf');
+}
 html, body {
   position: relative;
   background: #1a1a1a;
@@ -262,7 +266,7 @@ label.error {
 	padding-left: 25px;
 	font-style: italic;
 	letter-spacing: 3px;
-	font-family: "Gotham Rounded", "Century Gothic", "Microsoft Sans Serif", "Arial Unicode MS", "Arial Rounded MT", sans-serif;
+	font-family: Gotham-Rounded, "Gotham Rounded", "Century Gothic", "Microsoft Sans Serif", "Arial Unicode MS", "Arial Rounded MT", sans-serif;
 }
 #pages {
   width: 1024px;
@@ -280,7 +284,7 @@ label.error {
 	font-size: 54px;
 	font-style: italic;
 	letter-spacing: 3px;
-	font-family: "Gotham Rounded", "Century Gothic", "Microsoft Sans Serif", "Arial Unicode MS", "Arial Rounded MT", sans-serif;
+	font-family: Gotham-Rounded, "Gotham Rounded", "Century Gothic", "Microsoft Sans Serif", "Arial Unicode MS", "Arial Rounded MT", sans-serif;
 	margin-bottom: 25px;
 }
 /*********************************************************/
@@ -656,22 +660,22 @@ label.error {
 	text-indent: -3000em;
 }
 #micro_elements .micro_element_row .micro_element_box a.micro_link.core {
-  background: url(../images/micro_link_core.png) 0px 0px no-repeat;
+	background: url(../images/micro_link_core.png) 0px 0px no-repeat;
 }
 #micro_elements .micro_element_row .micro_element_box a.micro_link.results {
-  background: url(../images/micro_link_results.png) 0px 0px no-repeat;
+	background: url(../images/micro_link_results.png) 0px 0px no-repeat;
 }
 #micro_elements .micro_element_row .micro_element_box a.micro_link.technology {
-  background: url(../images/micro_link_technology.png) 0px 0px no-repeat;
+	background: url(../images/micro_link_technology.png) 0px 0px no-repeat;
 }
 #micro_elements .micro_element_row .micro_element_box a.micro_link.tools {
-  background: url(../images/micro_link_tools.png) 0px 0px no-repeat;
+	background: url(../images/micro_link_tools.png) 0px 0px no-repeat;
 }
 #micro_elements .micro_element_row .micro_element_box a.micro_link.problems {
-  background: url(../images/micro_link_problems.png) 0px 0px no-repeat;
+	background: url(../images/micro_link_problems.png) 0px 0px no-repeat;
 }
 #micro_elements .micro_element_row .micro_element_box a.micro_link.video {
-  background: url(../images/micro_link_video.png) 0px 0px no-repeat;
+	background: url(../images/micro_link_video.png) 0px 0px no-repeat;
 }
 #micro_elements .micro_element_row .micro_element_box h3 {
 	font-size:30px;
