@@ -622,7 +622,6 @@ label.error {
 /******************MICRO ELEMENTS*************************/
 #micro_elements, #inner_micros {
 	position: relative;
-	float: left;
 }
 #inner_micros {
 	padding-left: 25px;
