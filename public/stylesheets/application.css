@@ -573,11 +573,11 @@ label.error {
 /*  background: url(../images/green_box_header.png) 0px 0px no-repeat;*/
 }
 .solid_blue .content_bottom h3 {
-  background: url(../images/blue_box_header.png) 0px 0px no-repeat;
+  background: url(../images/yellow_box_header.png) 0px 0px no-repeat;
 /*  background: url(../images/green_box_header.png) 0px 0px no-repeat;*/
 }
 .solid_yellow .content_bottom h3 {
-  background: url(../images/yellow_box_header.png) 0px 0px no-repeat;
+  background: url(../images/blue_box_header.png) 0px 0px no-repeat;
 /*  background: url(../images/green_box_header.png) 0px 0px no-repeat;*/
 }
 .solid_grey .content_bottom h3 {
@@ -666,10 +666,10 @@ label.error {
 	background: url(../images/micro_link_results.png) 0px 0px no-repeat;
 }
 #micro_elements .micro_element_row .micro_element_box a.micro_link.technology {
-	background: url(../images/micro_link_technology.png) 0px 0px no-repeat;
+	background: url(../images/micro_link_tools.png) 0px 0px no-repeat;
 }
 #micro_elements .micro_element_row .micro_element_box a.micro_link.tools {
-	background: url(../images/micro_link_tools.png) 0px 0px no-repeat;
+	background: url(../images/micro_link_technology.png) 0px 0px no-repeat;
 }
 #micro_elements .micro_element_row .micro_element_box a.micro_link.problems {
 	background: url(../images/micro_link_problems.png) 0px 0px no-repeat;
