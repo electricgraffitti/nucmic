@@ -1,33 +1,3 @@
-var flash = {
-	
-	injectFlashBox: function () {
-		$('#flash').addClass("flash_wrap");
-		$("#flash").hide();
-	},
-	
-	setFlash: function(){
-	 	flash_message = $("#flash").html();
-  	msg = $.trim(flash_message);
-   	if(msg != "") {
-  		flash.activateNotice(flash_message);
-  	};
-	},
-	
-	activateNotice: function (flash_message) {
-		var $flash_div = $("#flash");
-	 	$flash_div.html(flash_message);
-	 	$flash_div.show("slide", {direction: 'up'});
-		// Set the fadeout
-		setTimeout(function() {
-	  $flash_div.hide("slide", {direction: 'up'},
-		  function() {
-		   $flash_div.html("");
-		   $flash_div.hide()})},
-		 	2500);
-	}
-	
-};
-
 var nav = {
 	
 	setNavHover: function() {
@@ -232,9 +202,6 @@ var app = {
 	},
 	
 	loadCoreFunctions: function() {
-		// nav.setNavHover();
-		flash.injectFlashBox();
-		flash.setFlash();
 		app.setBodyHeight();
 		app.dynamicBodyHeight();
 		scroll.loadTriggers();
