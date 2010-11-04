@@ -40,7 +40,15 @@ a:hover {
 .green {
   color: #5bab46;
 }
-
+.yellow {
+	color: #f7b219;
+}
+.blue {
+	color: #398dcc;
+}
+.red {
+	color: #d93b27;
+}
 /***Firefox dotted line tweak***/
 a, button {
   outline: none;
@@ -119,6 +127,11 @@ label.error {
   width: 100%;
   height: 100%;
   text-indent: -3333em;
+}
+#tagline {
+	position: absolute;
+	right: 0px;
+	top: 0px;
 }
 #icon_nav {
   background: #333;
@@ -239,7 +252,18 @@ label.error {
 
 /*********************************************************/
 /******************PAGES*********************************/
-
+#home_page {
+	position: relative;
+	text-align: left;
+	color: #333;
+}
+#home_page p {
+	font-size: 54px;
+	padding-left: 25px;
+	font-style: italic;
+	letter-spacing: 3px;
+	font-family: "Gotham Rounded", "Century Gothic", "Microsoft Sans Serif", "Arial Unicode MS", "Arial Rounded MT", sans-serif;
+}
 #pages {
   width: 1024px;
   height: 3605px;
@@ -249,6 +273,15 @@ label.error {
   width: 1024px;
   height: 610px;
 
+}
+#elements_header {
+	text-align: left;
+	color: #333;
+	font-size: 54px;
+	font-style: italic;
+	letter-spacing: 3px;
+	font-family: "Gotham Rounded", "Century Gothic", "Microsoft Sans Serif", "Arial Unicode MS", "Arial Rounded MT", sans-serif;
+	margin-bottom: 25px;
 }
 /*********************************************************/
 /******************ELEMENTS******************************/
@@ -585,5 +618,144 @@ label.error {
   color: #0088cc;
   text-decoration: underline;
 }
-
-
+/*********************************************************/
+/******************MICRO ELEMENTS*************************/
+#micro_elements, #inner_micros {
+	position: relative;
+	float: left;
+}
+#inner_micros {
+	padding-left: 25px;
+}
+#micro_elements .micro_element_row {
+	position: relative;
+	float: left;
+	width: 957px;
+}
+#micro_elements .micro_element_row .micro_element {
+	position: relative;
+	float: left;
+	width: 77px;
+	height: 77px;
+	border-top: 5px solid #1a1a1a;
+	border-left: 5px solid #1a1a1a;
+}
+#micro_elements .micro_element_row .micro_element_box {
+	width: 77px;
+	height: 77px;
+	border-top: 5px solid #666;
+	border-left: 5px solid #666;
+	background: #000;
+}
+#micro_elements .micro_element_row .micro_element_box h3 {
+	font-size:30px;
+	font-weight:bold;
+	margin-top:35px;
+	padding-left:6px;
+	text-align:left;
+}
+#micro_elements .micro_element_row .micro_element.left_border {
+	height: 82px;
+	border-left: 5px solid #666;
+	border-top: none;
+}
+#micro_elements .micro_element_row .micro_element.top_border {
+	width: 82px;
+	border-top: 5px solid #666;
+	border-left: none;
+}
+#micro_elements .micro_element_row .micro_element.left_top_border {
+	width: 77px;
+	height: 77px;
+	border-top: 5px solid #666;
+	border-left: 5px solid #666;
+}
+#micro_elements .micro_element_row .micro_element.left_border_full {
+	height: 87px;
+	border-left: 5px solid #666;
+	border-top: none;
+	border-bottom: none;
+}
+#micro_elements .micro_element_row .micro_element.top_border_full {
+	width: 87px;
+	border-top: 5px solid #666;
+	border-left: none;
+	border-right: none;
+}
+#micro_elements .micro_element_row .micro_element.left_top_border_full {
+	width: 82px;
+	border-top: 5px solid #666;
+	border-left: 5px solid #666;
+	border-right: none;
+}
+#micro_elements .micro_element_row .micro_element.top_left_border_full {
+	height: 82px;
+	border-top: 5px solid #666;
+	border-left: 5px solid #666;
+}
+#micro_elements .micro_element_row .micro_element.empty_left {
+	width: 77px;
+	border-left: none;
+}
+#micro_elements .micro_element_row .micro_element.no-bottom {
+	border-bottom: 5px solid #666;
+}
+#micro_elements .micro_element_row .micro_element.green {
+	color: #73bd44;
+}
+#micro_elements .micro_element_row .micro_element.red {
+	color: #d93b27;
+}
+#micro_elements .micro_element_row .micro_element.blue {
+	color: #398dcc;
+}
+#micro_elements .micro_element_row .micro_element.yellow {
+	color: #f7b219;
+}
+#micro_elements .micro_element_row .micro_element.yellow {
+	color: #f7b219;
+}
+#micro_elements .micro_element_row .micro_element.solid_green {
+	background: #73bd44;
+	color: #fff;
+}
+#micro_elements .micro_element_row .micro_element.solid_red {
+	background: #d93b27;
+	color: #fff;
+}
+#micro_elements .micro_element_row .micro_element.solid_blue {
+	background: #398dcc;
+	color:#fff;
+}
+#micro_elements .micro_element_row .micro_element.solid_yellow {
+	background: #f7b219;
+	color: #fff;
+}
+#micro_elements .micro_element_row .micro_element.solid_grey {
+	background: #808080;
+	color: #000;
+}
+#micro_elements .micro_element.solid_hci_green {
+ 	background: #00853e;
+	color: #fff;
+}
+#micro_elements .micro_element.solid_hci_red {
+ 	background: #98012e;
+	color: #fff;
+}
+#micro_elements .micro_element.solid_hci_blue {
+ 	background: #009fc3; 
+	color: #fff;
+}
+#micro_elements .micro_element.solid_hci_yellow {
+ 	background: #e4b43a; 
+	color: #fff;
+}
+#micro_elements .micro_element.solid_hci_dark_blue {
+ 	background: #00467f; 
+	color: #fff;
+}
+#micro_elements .micro_element.solid_hci_purple {
+ 	background: #78496a;
+	color: #fff;
+}

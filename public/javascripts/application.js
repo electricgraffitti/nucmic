@@ -150,17 +150,26 @@ var scroll = {
       $subNavList.show();
       
     });
-    
-    
-    
   },
   
+	homeNavToggle: function() {
+		var $homeLink = $('.home_link');
+		
+		$homeLink.click(function(e) {
+			var pagehref = $(this).attr("href");
+			e.preventDefault();
+			$('#bd').scrollTo($(pagehref), 800);
+		});
+		
+	},
+
   loadTriggers: function() {
     scroll.iconNavToggle();
     scroll.topNavToggle(); 
     scroll.boxNavToggle();
     scroll.subNavToggle();
     scroll.setSubNavColor();
+		scroll.homeNavToggle();
   }
   
 };
@@ -189,13 +198,10 @@ var flip = {
   },
   
   loadFlips: function() {
-   flip.flipElement();
-   
-    
+   flip.flipElement();  
   }
   
 };
-
 
 var app = {
 	
