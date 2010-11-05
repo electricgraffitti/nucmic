@@ -159,7 +159,9 @@ var flip = {
   
   flipElement: function() {
     var $element = $('.element_front');
-    $element.click(function() {
+    $element.click(function(e) {
+			if( $(e.target).hasClass('no_prop') ) return false; 
+			
       var $parentBox = $(this).parent('.element');
       var $flipContent = $(this).siblings('.element_back');
       if ($parentBox.hasClass('flipped')) {
@@ -184,6 +186,38 @@ var flip = {
   
 };
 
+var video = {
+	
+	setFlowPlayer: function(d,l) {
+		flowplayer(
+			// The Player div passed in from args
+			d,
+			
+			// The path to the flowplayer swf
+			"/flowplayer-3.2.5.swf",
+			
+			// Video URL from args
+			l,
+			
+			// Config Options
+			{
+				
+				
+			});
+	},
+	
+	triggerVideo: function() {
+		var $trigger = $('.video_trigger');
+		var $video_div = $trigger.attr('video_panel');
+		
+		$trigger.live('click', function(e) {
+			
+		});
+		
+	}
+	
+};
+
 var app = {
 	
 	setBodyHeight: function() {
@@ -206,6 +240,7 @@ var app = {
 		app.dynamicBodyHeight();
 		scroll.loadTriggers();
 		flip.loadFlips();
+		video.triggerVideo();
 	}
 	
 };
