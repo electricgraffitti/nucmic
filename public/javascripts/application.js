@@ -235,9 +235,18 @@ var app = {
 	 
 	},
 	
+	setTips: function() {
+	  $('.micro_element_box').tipTip({
+	    defaultPosition: 'top'
+	  });
+	  
+	 
+	},
+	
 	loadCoreFunctions: function() {
 		app.setBodyHeight();
 		app.dynamicBodyHeight();
+		app.setTips();
 		scroll.loadTriggers();
 		flip.loadFlips();
 		video.triggerVideo();
