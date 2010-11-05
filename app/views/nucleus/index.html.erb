@@ -22,26 +22,26 @@
           Contact us to request a demo
         </p>
         <div id="pardot_form">
-        <%= form_tag("http://www2.hcinsight.com/l/1492/2010-11-04/IWS2V", :method => "post") do %>
+        <%= form_tag("http://www2.hcinsight.com/l/1492/2010-11-04/IWS2V", :id => "pf", :method => "post") do %>
           <div class="form_field">
             <%= label_tag(:first_name, "First Name") %><br/>
-            <%= text_field_tag(:first_name) %>
+            <%= text_field_tag(:first_name, nil ,:class => "validate(required)") %>
           </div>
           <div class="form_field">
             <%= label_tag(:last_name, "Last Name") %><br/>
-            <%= text_field_tag(:last_name) %>
+            <%= text_field_tag(:last_name, nil ,:class => "validate(required)") %>
           </div>
           <div class="form_field">
             <%= label_tag(:title, "Title/Responsibility") %><br/>
-            <%= text_field_tag(:title) %>
+            <%= text_field_tag(:title, nil ,:class => "validate(required, username)") %>
           </div>
           <div class="form_field">
             <%= label_tag(:email, "Email") %><br/>
-            <%= text_field_tag(:first_name) %>
+            <%= text_field_tag(:email, nil ,:class => "validate(required, email)") %>
           </div>
           <div class="form_field">
             <%= label_tag(:company, "Company") %><br/>
-            <%= text_field_tag(:company) %>
+            <%= text_field_tag(:company, nil ,:class => "validate(required, username)") %>
           </div>
           <div class="form_field">
             <%= submit_tag("Request a Demo") %>

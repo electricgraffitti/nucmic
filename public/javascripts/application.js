@@ -243,10 +243,16 @@ var app = {
 	 
 	},
 	
+	formValidation: function() {
+	  $('#pf').ketchup();
+	 
+	},
+	
 	loadCoreFunctions: function() {
 		app.setBodyHeight();
 		app.dynamicBodyHeight();
-		app.setTips();
+    app.setTips();
+		app.formValidation();
 		scroll.loadTriggers();
 		flip.loadFlips();
 		video.triggerVideo();
