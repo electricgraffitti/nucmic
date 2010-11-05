@@ -709,10 +709,10 @@ label.error {
 #micro_elements .micro_element_row .micro_element_box a.micro_link.results {
 	background: url(../images/micro_link_results.png) 0px 0px no-repeat;
 }
-#micro_elements .micro_element_row .micro_element_box a.micro_link.technology {
+#micro_elements .micro_element_row .micro_element_box a.micro_link.tools {
 	background: url(../images/micro_link_tools.png) 0px 0px no-repeat;
 }
-#micro_elements .micro_element_row .micro_element_box a.micro_link.tools {
+#micro_elements .micro_element_row .micro_element_box a.micro_link.technology {
 	background: url(../images/micro_link_technology.png) 0px 0px no-repeat;
 }
 #micro_elements .micro_element_row .micro_element_box a.micro_link.problems {
