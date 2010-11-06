@@ -1,61 +1,46 @@
 var nav = {
 	
-	setNavHover: function() {
-		// get all <li> nav elements
-		var $nav_list = $('#main_nav ul li');
-		
-		// get all anchors in the <li>
-		var $anchors = $nav_list.find('a');
-		
-		// remove all highlight classes that are for non js browsers
-		$nav_list.removeClass('highlight');
-		
-		// dynamically add a span tag to each anchor that will have the hover CSS state
-		$anchors.append('<span class="hover" />');
-		
-		$anchors.each(function() {
-			
-			// reduce the font size for FF
-			$(this).css({fontSize : 0});
-			
-			// set all spans to invisible
-      var $span2 = $('> span.hover', this).css({opacity : 0});
-
-			// trigger the hover on each anchor to fade in the span with hover state
-      $(this).hover(function() {
-        if ($(this).hasClass('active')) {
-          $span2.stop().fadeTo(500, 0);
-        } else {
-         $span2.stop().fadeTo(500, 1); 
-        }
-      }, function() {
-        $span2.stop().fadeTo(500, 0);
-    	});
-			
-			// Adds the active class to the clicked anchor
-    	$(this).click( function() {
-      	$span2.fadeTo(200, 0);
-      	$anchors.removeClass('active');
-      	$(this).addClass('active');
-    	});
-
-		});
+	resetActive: function() {
+		var $a = $("#hd a");		
+		$a.removeClass("active");
 	},
 	
-	setInitialNav: function() {
-		// Get the current browser URL
-		var url = location.pathname;
-		
-		// Find the link that matches the URL and add the active class
-	  var $current_link = $('#main_nav ul li a[href$="' + url + '"]');
-	  if (url == "/") {
-	  	$current_link.removeClass('active');
-	    $('#nav1 li').addClass('active');
-	  } else {
-	   current_link.addClass('active');
-	  }
-	}
+	resetSubNavDisplay: function() {
+		var sn = $("#sub_nav ul");
+		sn.removeClass('active');
+	},
 	
+	setSubNav: function(color) {
+		var $subNav = $("#sub_nav");
+    var $subNavList = $subNav.children('ul.' + color);
+    $subNav.removeClass();
+    $subNav.addClass(color);
+    $subNav.children('ul').hide();
+    $subNavList.show();
+	},
+	
+	setActiveTopNav: function(eid) {
+		nav.resetActive();
+		var $tNav = $("#top_nav");
+		var n = $tNav.find("a[href=" + eid + "]");
+	},
+	
+	setActiveIconNav: function(eid) {
+		var $iNav = $("#icon_nav");
+		var n = $iNav.find("a[href=" + eid + "]");
+		var color = n.attr("trigger_color");
+		nav.resetActive();
+		nav.resetSubNavDisplay();
+		nav.setSubNav(color);
+		n.addClass('active');
+	},
+	
+	setActiveSubNav: function(eid) {
+		var $sNav = $("#sub_nav");
+		var n = $sNav.find("a[href=" + eid + "]");
+		$sNav.find("a").removeClass("active");
+		n.addClass('active');
+	}	
 };
 
 var scroll = {
@@ -66,7 +51,7 @@ var scroll = {
     $tnTrigger.click(function(e) {
       var pagehref = $(this).attr("href");
       e.preventDefault();
-      $('#bd').scrollTo($(pagehref), 800);
+      scroll.setScroll(pagehref);
     });
     
   },
@@ -77,7 +62,7 @@ var scroll = {
     $bnTrigger.click(function(e) {
       var boxhref = $(this).attr("href");
       e.preventDefault();
-      $('#bd').scrollTo($(boxhref), 800);
+      scroll.setScroll(boxhref);
     });
     
   },
@@ -88,37 +73,24 @@ var scroll = {
     $snTrigger.click(function(e) {
       var subhref = $(this).attr("href");
       e.preventDefault();
-      $('#bd').scrollTo($(subhref), 800);
+			nav.resetActive();
+			$(this).addClass('active');
+      scroll.setScroll(subhref);
     });
     
   },
   
   iconNavToggle: function() {
-    var $iconTrigger = $('#icon_nav li a');
+    var $iconTrigger = $('#icon_nav ul li a');
     
     $iconTrigger.click(function(e) {
+			e.preventDefault();
       var panelhref = $(this).attr("href");
-      e.preventDefault();
-      $('#bd').scrollTo($(panelhref), 800);
-    });
-  },
-  
-  setSubNavColor: function() {
-    var $iconNavTriggers = $('#icon_nav ul li a');
-    
-    var $subNav = $('#sub_nav');
-    
-    $iconNavTriggers.click(function(e) {
-      e.preventDefault();
-      var colorChip = $(this).attr('trigger_color');
-      var $subNavList = $subNav.children('ul.' + colorChip);
-      $(this).parents('#icon_nav').find('a').removeClass('active');
-      $(this).addClass('active');
-      $subNav.removeClass();
-      $subNav.addClass(colorChip);
-      $subNav.children('ul').hide();
-      $subNavList.show();
-      
+			var colorChip = $(this).attr('trigger_color');
+			nav.resetActive();
+			nav.setSubNav(colorChip);
+	    $(this).addClass('active');
+      scroll.setScroll(panelhref);
     });
   },
   
@@ -128,7 +100,7 @@ var scroll = {
 		$homeLink.click(function(e) {
 			var pagehref = $(this).attr("href");
 			e.preventDefault();
-			$('#bd').scrollTo($(pagehref), 800);
+			scroll.setScroll(pagehref);
 		});
 		
 	},
@@ -137,10 +109,50 @@ var scroll = {
 		var $microLink = $('.micro_link');
 		
 		$microLink.click(function(e) {
-			var pagehref = $(this).attr("href");
 			e.preventDefault();
-			$('#bd').scrollTo($(pagehref), 800);
+			var pagehref = $(this).attr("href");
+			var icon = $(this).attr("parent_box");
+			
+			if ($(this).hasClass("color_box")) {
+				nav.setActiveIconNav(pagehref);
+			} else {
+				nav.setActiveIconNav(icon);
+				nav.setActiveSubNav(pagehref);
+			}
+			
+			scroll.setScroll(pagehref);
 		});
+	},
+
+	elementTriggers: function() {
+		var $element = $(".element");
+		
+		$element.click(function() {
+			var eid = "#" + $(this).attr("id");
+			var icon = $(this).attr("parent_box");
+			
+			if ($(this).hasClass("color_box")) {
+				nav.setActiveIconNav(eid);
+			} else {
+				nav.setActiveIconNav(icon);
+				nav.setActiveSubNav(eid);
+			}
+			
+			scroll.setScroll(eid);
+			
+		});
+		
+	},
+	
+	setScroll: function(link) {
+		var el = $(link);
+		
+		if (el.hasClass("flipped")) {
+			return false;
+		} else {
+			$('#bd').scrollTo(el, 800);
+			flip.setAutoFlip(el);
+		}
 	},
 
   loadTriggers: function() {
@@ -148,41 +160,47 @@ var scroll = {
     scroll.topNavToggle(); 
     scroll.boxNavToggle();
     scroll.subNavToggle();
-    scroll.setSubNavColor();
 		scroll.homeNavToggle();
 		scroll.microTriggers();
+		scroll.elementTriggers();
   }
   
 };
 
 var flip = {
-  
-  flipElement: function() {
-    var $element = $('.element_front');
-    $element.click(function(e) {
-			if( $(e.target).hasClass('no_prop') ) return false; 
-			
-      var $parentBox = $(this).parent('.element');
-      var $flipContent = $(this).siblings('.element_back');
-      if ($parentBox.hasClass('flipped')) {
-        $(this).revertFlip();
-        $parentBox.removeClass('flipped'); 
-      } else {
-        $(this).flip({
-          direction:'lr',
-          speed:350,
-          content:$flipContent,
-          color:'#ffffff'
-        });
-        $parentBox.addClass('flipped');
-      }
+	
+	setAutoFlip: function(el) {
+		window.setTimeout(function() {
+			if (el.hasClass("color_box")) {
+				flip.revertFlipped(el);
+				return false;
+			} else {
+				flip.autoFlip(el);
+			}
+		}, 2000);
+	},
+	
+	revertFlipped: function() {
+		var el = $("#elements .element.flipped");
+		var $flipPanel = el.children('.element_front');
+		$flipPanel.revertFlip();
+		el.removeClass('flipped');
+	},
+	
+	autoFlip: function(el) {
+		var $flipPanel = el.children('.element_front');
+    var $flipContent = $flipPanel.siblings('.element_back');
+		
+		flip.revertFlipped(el);
 
+    $flipPanel.flip({
+      direction:'lr',
+      speed:350,
+      content:$flipContent,
+      color:'#ffffff'
     });
-  },
-  
-  loadFlips: function() {
-   flip.flipElement();  
-  }
+    el.addClass('flipped');
+	}
   
 };
 
@@ -211,7 +229,7 @@ var video = {
 		var $video_div = $trigger.attr('video_panel');
 		
 		$trigger.live('click', function(e) {
-			
+			console.log("watchin video bitches");
 		});
 		
 	}
@@ -239,13 +257,10 @@ var app = {
 	  $('.micro_element_box').tipTip({
 	    defaultPosition: 'top'
 	  });
-	  
-	 
 	},
 	
 	formValidation: function() {
 	  $('#pf').ketchup();
-	 
 	},
 	
 	loadCoreFunctions: function() {
@@ -254,7 +269,6 @@ var app = {
     app.setTips();
 		app.formValidation();
 		scroll.loadTriggers();
-		flip.loadFlips();
 		video.triggerVideo();
 	}
 	

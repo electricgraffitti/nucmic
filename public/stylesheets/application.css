@@ -1,5 +1,5 @@
-/*********************************************************/
-/******************BASE STYLES****************************/
+/********************************************************************************************/
+/******************************************************************* BASE STYLES ************/
 @font-face {
 	font-family: Gotham-Rounded;
 	src: url('/fonts/GothamRnd-Book.otf');
@@ -29,7 +29,7 @@ a {
   text-decoration: none;
 }
 a:hover {
- 	text-decoration: underline;
+ 	/*text-decoration: underline;*/
 }
 .hide_text {
   text-indent: -3000em;
@@ -85,8 +85,8 @@ label.error {
 	width: 300px;
 }
 
-/*********************************************************/
-/******************HEADER*********************************/
+/********************************************************************************************/
+/************************************************************************ HEADER ************/
 
 #hd ul, #hd li, #hd a, #top_nav, #icon_nav, #sub_nav, #icon_nav ul, #icon_nav ul li, #icon_nav ul li a, #sub_nav ul, #sub_nav ul li, #sub_nav ul li a {
   position: relative;
@@ -103,7 +103,7 @@ label.error {
 #top_nav a {
   display: block;
   height: 20px;
-  margin-top: 20px;
+  margin-top: 25px;
   margin-right: 30px;
 }
 #top_nav a:hover {
@@ -205,23 +205,65 @@ label.error {
 #sub_nav.green {
    background: transparent url(../images/green_sub_nav_bg.png) 0px 0px repeat-x; 
 }
+#sub_nav.green ul li a span {
+	color: #61b52d;
+}
+#sub_nav.green ul li a:hover span, #sub_nav.green ul li a.active span {
+	color: #fff;
+}
 #sub_nav.red {
    background: transparent url(../images/red_sub_nav_bg.png) 0px 0px repeat-x; 
+}
+#sub_nav.red ul li a span {
+	color: #c73624;
+}
+#sub_nav.red ul li a:hover span, #sub_nav.red ul li a.active span {
+	color: #fff;
 }
 #sub_nav.blue {
    background: transparent url(../images/blue_sub_nav_bg.png) 0px 0px repeat-x; 
 }
+#sub_nav.blue ul li a span {
+	color: #3684c0;
+}
+#sub_nav.blue ul li a:hover span, #sub_nav.blue ul li a.active span {
+	color: #fff;
+}
 #sub_nav.yellow {
    background: transparent url(../images/yellow_sub_nav_bg.png) 0px 0px repeat-x; 
+}
+#sub_nav.yellow ul li a span {
+	color: #e9a40e;
+}
+#sub_nav.yellow ul li a:hover span, #sub_nav.yellow ul li a.active span {
+	color: #fff;
 }
 #sub_nav.grey {
    background: transparent url(../images/grey_sub_nav_bg.png) 0px 0px repeat-x; 
 }
+#sub_nav.grey ul li a span {
+	color: #626365;
+}
+#sub_nav.grey ul li a:hover span, #sub_nav.grey ul li a.active span {
+	color: #fff;
+}
 #sub_nav.white {
    background: transparent url(../images/white_sub_nav_bg.png) 0px 0px repeat-x;    
 }
+#sub_nav.white ul li a span {
+	color: #e9e9e9;
+}
+#sub_nav.white ul li a:hover span, #sub_nav.white ul li a.active span {
+	color: #000;
+}
 #sub_nav.black {
    background: transparent url(../images/white_sub_nav_bg.png) 0px 0px repeat-x; 
+}
+#sub_nav.black ul li a span {
+	color: #e9e9e9;
+}
+#sub_nav.black ul li a:hover span, #sub_nav.black ul li a.active span {
+	color: #000;
 }
 #sub_nav.white a, #sub_nav.black a {
   color: #000;
@@ -235,8 +277,8 @@ label.error {
   margin: 6px 52px 0 0;
 }
 
-/*********************************************************/
-/******************CONTENT********************************/
+/********************************************************************************************/
+/*********************************************************************** CONTENT ************/
 #bd, #pages, #elements, #main_content {
   position: relative;
   float: left;
@@ -246,7 +288,7 @@ label.error {
   width: 500px;*/
   min-width: 1024px;
   min-height: 768px;
-  overflow: hidden;
+  overflow: scroll;
   margin: 15px 0px 0px 15px;
 }
 #main_content {
@@ -254,8 +296,8 @@ label.error {
   height: 3605px;
 }
 
-/*********************************************************/
-/******************PAGES*********************************/
+/********************************************************************************************/
+/************************************************************************* PAGES ************/
 #home_page {
 	position: relative;
 	text-align: left;
@@ -331,8 +373,8 @@ label.error {
 	width: 719px;
 	height: 458px;
 }
-/*********************************************************/
-/******************ELEMENTS******************************/
+/********************************************************************************************/
+/********************************************************************** ELEMENTS ************/
 
 #elements {
   width: 5665px;
@@ -372,9 +414,8 @@ label.error {
   text-align:center;
   text-indent:0;
 }
-/* ======================================================== */
-/* = FLIPPED COLOR STYLES                                 = */
-/* ======================================================== */
+/********************************************************************************************/
+/********************************************************** FLIPPED SOLOR STYLES ************/
 #elements .element.flipped .element_front h3 span {
   font-weight: bold;
   font-size: 40px;
@@ -666,8 +707,8 @@ label.error {
   color: #0088cc;
   text-decoration: underline;
 }
-/*********************************************************/
-/******************MICRO ELEMENTS*************************/
+/********************************************************************************************/
+/**************************************************************** MICRO ELEMENTS ************/
 #micro_elements, #inner_micros {
 	position: relative;
 }
@@ -834,9 +875,8 @@ label.error {
 	color: #fff;
 }
 
-/* ====================================================== */
-/* = tiptip                                             = */
-/* ====================================================== */
+/********************************************************************************************/
+/*********************************************************************** TIPTIP *************/
 
 /* TipTip CSS - Version 1.2 */
 
@@ -948,5 +988,37 @@ label.error {
 	#tiptip_holder.tip_top #tiptip_arrow_inner { 
 		border-top-color: #fff;
 	}
+}
+/********************************************************************************************/
+/*********************************************************************** KETCHUP ************/
+.ketchup-error-container {
+  display: none;
+  position: absolute;
+  width: auto;
+}
+
+.ketchup-error-container ol {
+  font-size: 12px;
+  color: #111;
+  background: red;
+  background: rgba(255, 0, 0, 0.6);
+  padding: 10px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  list-style: none;
+  line-height: 16px;
+}
+
+.ketchup-error-container span {
+  display: block;
+  width: 0; 
+  height: 0; 
+  border-left: 0 solid transparent; 
+  border-right: 15px solid transparent;
+  border-top: 10px solid red;
+  border-top: 10px solid rgba(255, 0, 0, 0.6);
+  border-bottom: 0;
+  margin-left: 10px;
 }
 

@@ -15,7 +15,7 @@
 
 <div id="icon_nav">
   <ul>
-    <li id="nav1"><%= link_to "Core Elements", "#e1", :trigger_color => "green" %></li>
+    <li id="nav1"><%= link_to "Core Elements", "#e1", :class => "active", :trigger_color => "green" %></li>
     <li id="nav2"><%= link_to "Results", "#e36", :trigger_color => "red" %></li>
     <li id="nav3"><%= link_to "Technology", "#e5", :trigger_color => "blue" %></li>
     <li id="nav4"><%= link_to "Tools", "#e50", :trigger_color => "yellow" %></li>
@@ -30,51 +30,50 @@
 
 <div id="sub_nav" class="green">
   <ul id="core_elements_sub_nav" class="green">
-    <li><%= link_to "Clinical Touch", "#e2" %></li>
-    <li><%= link_to "Prepayment Solutions", "#e12" %></li>
-    <li><%= link_to "Great Service", "#e13" %></li>
-    <li><%= link_to "User Friendly", "#e14" %></li>
-    <li><%= link_to "Advanced Analytics", "#e24" %></li>
+    <li><%= link_to raw("<span>[</span> Clinical Touch <span>]</span>"), "#e2" %></li>
+    <li><%= link_to raw("<span>[</span> Prepayment Solutions <span>]</span>"), "#e12" %></li>
+    <li><%= link_to raw("<span>[</span> Great Service <span>]</span>"), "#e13" %></li>
+    <li><%= link_to raw("<span>[</span> User Friendly <span>]</span>"), "#e14" %></li>
+    <li><%= link_to raw("<span>[</span> Advanced Analytics <span>]</span>"), "#e24" %></li>
   </ul>
   <ul id="results_sub_nav" class="red hidden">
-    <li><%= link_to "Better Results", "#e15" %></li>
-    <li><%= link_to "Total Insight", "#e25" %></li>
-    <li><%= link_to "Accelerated Productivity", "#e26" %></li>
-    <li><%= link_to "Claim Neutral", "#e27" %></li>
-    <li><%= link_to "Happier Users", "#e37" %></li>
+    <li><%= link_to raw("<span>[</span> Better Results <span>]</span>"), "#e15" %></li>
+    <li><%= link_to raw("<span>[</span> Total Insight <span>]</span>"), "#e25" %></li>
+    <li><%= link_to raw("<span>[</span> Accelerated Productivity <span>]</span>"), "#e26" %></li>
+    <li><%= link_to raw("<span>[</span> Claim Neutral <span>]</span>"), "#e27" %></li>
+    <li><%= link_to raw("<span>[</span> Happier Users <span>]</span>"), "#e37" %></li>
   </ul>
   <ul id="technology_sub_nav" class="blue hidden">
-    <li><%= link_to "Social Messaging", "#e6" %></li>
-    <li><%= link_to "Work Smarter", "#e16" %></li>
-    <li><%= link_to "Total Customization", "#e17" %></li>
-    <li><%= link_to "Idea-driven", "#e18" %></li>
-    <li><%= link_to "Help Center", "#e28" %></li>
+    <li><%= link_to raw("<span>[</span> Social Messaging <span>]</span>"), "#e6" %></li>
+    <li><%= link_to raw("<span>[</span> Work Smarter <span>]</span>"), "#e16" %></li>
+    <li><%= link_to raw("<span>[</span> Total Customization <span>]</span>"), "#e17" %></li>
+    <li><%= link_to raw("<span>[</span> Idea-driven <span>]</span>"), "#e18" %></li>
+    <li><%= link_to raw("<span>[</span> Help Center <span>]</span>"), "#e28" %></li>
   </ul>
   <ul id="tools_sub_nav" class="yellow hidden">
-    <li><%= link_to "Real-time Processing", "#e29" %></li>
-    <li><%= link_to "Software-as-a-Service", "#e39" %></li>
-    <li><%= link_to "Absolute Security", "#e40" %></li>
-    <li><%= link_to "Easily Scalable", "#e41" %></li>
-    <li><%= link_to "Seamless Integration", "#e51" %></li>
-    <li><%= link_to "" %></li>
+    <li><%= link_to raw("<span>[</span> Real-time Processing <span>]</span>"), "#e29" %></li>
+    <li><%= link_to raw("<span>[</span> Software-as-a-Service <span>]</span>"), "#e39" %></li>
+    <li><%= link_to raw("<span>[</span> Absolute Security <span>]</span>"), "#e40" %></li>
+    <li><%= link_to raw("<span>[</span> Easily Scalable <span>]</span>"), "#e41" %></li>
+    <li><%= link_to raw("<span>[</span> Seamless Integration <span>]</span>"), "#e51" %></li>
   </ul>
   <ul id="problem_elements_sub_nav" class="grey hidden">
-    <li><%= link_to "Fraud", "#e58" %></li>
-    <li><%= link_to "Waste", "#e59" %></li>
-    <li><%= link_to "Abuse", "#e60" %></li>
+    <li><%= link_to raw("<span>[</span> Fraud <span>]</span>"), "#e58" %></li>
+    <li><%= link_to raw("<span>[</span> Waste <span>]</span>"), "#e59" %></li>
+    <li><%= link_to raw("<span>[</span> Abuse <span>]</span>"), "#e60" %></li>
   </ul>
   <ul id="solutions_sub_nav" class="white hidden">
-    <li><%= link_to "PhysicianClaim Insight", "#e9" %></li>
-    <li><%= link_to "DentalClaim Insight", "#e20" %></li>
-    <li><%= link_to "OncologyClaim Insight", "#e21" %></li>
-    <li><%= link_to "FacilityClaim Insight", "#e31" %></li>
-    <li><%= link_to "PharmaClaim Insight", "#e32" %></li>
-    <li><%= link_to "CaseTracker Insight", "#e43" %></li>
+    <li><%= link_to raw("<span>[</span> PhysicianClaim Insight <span>]</span>"), "#e9" %></li>
+    <li><%= link_to raw("<span>[</span> DentalClaim Insight <span>]</span>"), "#e20" %></li>
+    <li><%= link_to raw("<span>[</span> OncologyClaim Insight <span>]</span>"), "#e21" %></li>
+    <li><%= link_to raw("<span>[</span> FacilityClaim Insight <span>]</span>"), "#e31" %></li>
+    <li><%= link_to raw("<span>[</span> PharmaClaim Insight <span>]</span>"), "#e32" %></li>
+    <li><%= link_to raw("<span>[</span> CaseTracker Insight <span>]</span>"), "#e43" %></li>
   </ul>
   <ul id="video_sub_nav" class="black hidden">
-    <li><%= link_to "Core Elements", "#e63" %></li>
-    <li><%= link_to "Results", "#e63" %></li>
-    <li><%= link_to "Technology", "#e63" %></li>
-    <li><%= link_to "Tools", "#e63" %></li>
+    <li><%= link_to raw("<span>[</span> Core Elements <span>]</span>"), "#e63" %></li>
+    <li><%= link_to raw("<span>[</span> Results <span>]</span>"), "#e63" %></li>
+    <li><%= link_to raw("<span>[</span> Technology <span>]</span>"), "#e63" %></li>
+    <li><%= link_to raw("<span>[</span> Tools <span>]</span>"), "#e63" %></li>
   </ul>
 </div>

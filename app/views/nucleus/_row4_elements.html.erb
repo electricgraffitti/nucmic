@@ -4,25 +4,25 @@
     <div id="e35" class="element">
       
     </div>
-    <div id="e36" class="element solid_red">
+    <div id="e36" class="element solid_red color_box">
       <%= render :partial => 'red_box_content' %>
     </div>
     
-    <div id="e37" class="element red">
+    <div id="e37" class="element red" parent_box="#e36">
       <%= render :partial => 'e37_panels' %>
     </div>
     <div id="e38" class="element">
       
     </div>
-    <div id="e39" class="element yellow">
+    <div id="e39" class="element yellow" parent_box="#e50">
       <%= render :partial => 'e39_panels' %>
     </div>
     
-    <div id="e40" class="element yellow">
+    <div id="e40" class="element yellow" parent_box="#e50">
       <%= render :partial => 'e40_panels' %>
     </div>
     
-    <div id="e41" class="element yellow">
+    <div id="e41" class="element yellow" parent_box="#e50">
       <%= render :partial => 'e41_panels' %>
     </div>
     
@@ -30,7 +30,7 @@
       
     </div>
     
-    <div id="e43" class="element solid_hci_purple">
+    <div id="e43" class="element solid_hci_purple" parent_box="#e9">
       <%= render :partial => 'e43_panels' %>
     </div>
     
