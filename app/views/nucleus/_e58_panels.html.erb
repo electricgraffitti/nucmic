@@ -7,11 +7,15 @@
     <%= image_tag("/images/grey_f_icon.png", :alt => "Fraud") %>
   </div>
   <div class="content_bottom">
-    <h3><span>F</span> Fraud</h3>
-    <div class="content_left">
-      <p>
+    <h3><span>F</span> Fraud</h3>      
+      <div class="content_top_section">
+        <p>
         For some, fraud is a four-letter word that involves false claims, kickbacks and identity theft. Perpetrated by complex criminal networks to individual providers, fraud robs our nation’s health care system. The result? Skyrocketing costs, higher premiums and more innocent victims.
-    </div>
+        </p>
+      </div>
       <%= render :partial => 'flipped_box_links', :locals => {:element_type => "grey_video"} %>
+      <div class="next_trigger">
+        <%= link_to raw("Next Element &raquo;"), "#e59", :class => "next_element_trigger", :parent_box => "#e57" %>
+      </div>
   </div>
 </div>

@@ -7,12 +7,15 @@
     <%= image_tag("/images/green_aa_icon.png", :alt => "Advanced Analytics") %>
   </div>
   <div class="content_bottom">
-    <h3><span>Aa</span> Advanced Analytics</h3>
-    <div class="content_left">
-      <p>
+    <h3><span>Aa</span> Advanced Analytics</h3>      
+      <div class="content_top_section">
+        <p>
         HCI’s Nucleus platform deploys highly effective next-generation analytics you can’t find anywhere else. With millions of payment triggers in your arsenal, you’ll see a significant boost in your fraud detection rates.
-      </p>
-    </div>
+        </p>
+      </div>
       <%= render :partial => 'flipped_box_links', :locals => {:element_type => "green_video"} %>
+      <div class="next_trigger">
+        <%= link_to raw("Next Element &raquo;"), "#e5", :class => "next_element_trigger", :parent_box => "#e1" %>
+      </div>
   </div>
 </div>

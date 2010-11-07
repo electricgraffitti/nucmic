@@ -7,12 +7,15 @@
     <%= image_tag("/images/red_cn_icon.png", :alt => "Claim Neutral") %>
   </div>
   <div class="content_bottom">
-    <h3><span>Cn</span> Claim Neutral</h3>
-    <div class="content_left">
-      <p>
+    <h3><span>Cn</span> Claim Neutral</h3>      
+      <div class="content_top_section">
+        <p>
         It’s time to consolidate. Nucleus gives you all-in-one versatility on a scalable, claim neutral platform. Now you can stop fraud in physician, facility, dental, and pharmacy claims with a powerful integrated solution.
-      </p>
-    </div>
+        </p>
+      </div>
       <%= render :partial => 'flipped_box_links', :locals => {:element_type => "red_video"} %>
+      <div class="next_trigger">
+        <%= link_to raw("Next Element &raquo;"), "#e37", :class => "next_element_trigger", :parent_box => "#e36" %>
+      </div>
   </div>
 </div>

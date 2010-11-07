@@ -7,12 +7,15 @@
     <%= image_tag("/images/blue_hc_icon.png", :alt => "Help Center") %>
   </div>
   <div class="content_bottom">
-    <h3><span>Hc</span> Help Center</h3>
-    <div class="content_left">
-      <p>
-        You’ll never be left in the dark with the Nucleus Help Center. Providing new ways to navigate the user experience, you can chat online with our support team, watch video tutorials and visit HCI U. With Nucleus, help is only a click away.
-      </p>
-    </div>
+    <h3><span>Hc</span> Help Center</h3>      
+      <div class="content_top_section">
+        <p>
+        You’ll never be left in the dark with the Nucleus Help Center. Providing new ways to navigate the user experience, you can chat online with our support team, watch video tutorials and visit HCI U. With Nucleus, help is only a click away
+        </p>
+      </div>
       <%= render :partial => 'flipped_box_links', :locals => {:element_type => "blue_video"} %>
+      <div class="next_trigger">
+        <%= link_to raw("Next Element &raquo;"), "#e36", :class => "next_element_trigger", :parent_box => "#e5" %>
+      </div>
   </div>
 </div>

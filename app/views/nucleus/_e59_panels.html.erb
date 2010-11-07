@@ -8,11 +8,14 @@
   </div>
   <div class="content_bottom">
     <h3><span>W</span> Waste</h3>
-    <div class="content_left">
-      <p>
+      <div class="content_top_section">
+        <p>
         Waste (aka Overpayment) is a major contributor to the $300B lost to FWA annually. Many honest providers unknowingly facilitate waste in the form of administrative errors, duplicate claims and modifier misuse. Unfortunately, the patient gets stuck with the tab.
-      </p>
-    </div>
+        </p>
+      </div>
       <%= render :partial => 'flipped_box_links', :locals => {:element_type => "grey_video"} %>
+      <div class="next_trigger">
+        <%= link_to raw("Next Element &raquo;"), "#e60", :class => "next_element_trigger", :parent_box => "#e57" %>
+      </div>
   </div>
 </div>

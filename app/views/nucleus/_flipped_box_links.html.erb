@@ -1,13 +1,13 @@
-<div class="content_right no_propogate">
+<div class="content_bottom_section no_propogate">
   <ul>
     <li class="no_trigger">
-      <%= link_to raw("Watch Video &raquo;"), "#video", :class => "video_trigger no_prop", :video_panel => "#{element_type}" %>
+      <%= link_to raw("Watch Video"), "/videos/meet_nucleus.f4v", :class => "video_trigger no_prop", :video_panel => "#{element_type}", :rel => 'div.overlay' %>
     </li>
     <li class="no_trigger">
-      <%= link_to raw("Request a demo &raquo;"), "#contact_form", :class => "no_prop" %>
+      <%= link_to raw("Request a demo"), "#contact_form", :class => "no_prop" %>
     </li>
     <li>
-      <%= link_to raw("Visit HealthCare Insight &raquo;"), "http://www.hcinsight.com", :target => "_blank" %>
+      <%= link_to raw("Visit hcinsight.com"), "http://www.hcinsight.com", :target => "_blank" %>
     </li>
   </ul>
 </div>

@@ -7,12 +7,15 @@
     <%= image_tag("/images/blue_ws_icon.png", :alt => "Work Smarter") %>
   </div>
   <div class="content_bottom">
-    <h3><span>Ws</span> Work Smarter</h3>
-    <div class="content_left">
-      <p>
+    <h3><span>Ws</span> Work Smarter</h3>      
+      <div class="content_top_section">
+        <p>
         Sleek. Efficient. Intelligent. Nucleus is like no other payment integrity application. With a clean, intuitive interface that includes intelligent fraud scoring and color-coded indicators, it’s designed to help you stop fraud faster and work smarter.
-      </p>
-    </div>
+        </p>
+      </div>
       <%= render :partial => 'flipped_box_links', :locals => {:element_type => "blue_video"} %>
+      <div class="next_trigger">
+        <%= link_to raw("Next Element &raquo;"), "#e17", :class => "next_element_trigger", :parent_box => "#e5" %>
+      </div>
   </div>
 </div>

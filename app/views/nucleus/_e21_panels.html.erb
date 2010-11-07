@@ -8,11 +8,14 @@
   </div>
   <div class="content_bottom">
     <h3><span>Oci</span> OncologyClaim Insight</h3>
-    <div class="content_left">
-      <p>
+      <div class="content_top_section">
+        <p>
         Experience the only oncology claim solution that reduces costs and elevates patient care. OCI combines targeted claim and case identification software. You’ll get evidenced-based treatment plans and support from Oncology Certified Nurses to help you save.
-      </p>
-    </div>
-      <%= render :partial => 'flipped_box_links', :locals => {:element_type => "solid_hci_yellow_video"} %>
+        </p>
+      </div>
+      <%= render :partial => 'flipped_box_links', :locals => {:element_type => "solution_video"} %>
+      <div class="next_trigger">
+        <%= link_to raw("Next Element &raquo;"), "#e31", :class => "next_element_trigger", :parent_box => "#e9" %>
+      </div>
   </div>
 </div>

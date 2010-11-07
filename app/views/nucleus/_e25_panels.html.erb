@@ -7,12 +7,15 @@
     <%= image_tag("/images/red_ti_icon.png", :alt => "Total Insight") %>
   </div>
   <div class="content_bottom">
-    <h3><span>Ti</span> Total Insight</h3>
-    <div class="content_left">
-      <p>
+    <h3><span>Ti</span> Total Insight</h3>      
+      <div class="content_top_section">
+        <p>
         Health care reimbursement is a complex equation. The answers are in the data and Nucleus gives you the tools to find them. See results on the real-time dashboard and access leadership &mdash; level reports to stay ahead of the competition.
-      </p>
-    </div>
+        </p>
+      </div>
       <%= render :partial => 'flipped_box_links', :locals => {:element_type => "red_video"} %>
+      <div class="next_trigger">
+        <%= link_to raw("Next Element &raquo;"), "#e26", :class => "next_element_trigger", :parent_box => "#e36" %>
+      </div>
   </div>
 </div>

@@ -7,12 +7,15 @@
     <%= image_tag("/images/yellow_sa_icon.png", :alt => "Software-as-a-Service") %>
   </div>
   <div class="content_bottom">
-    <h3><span>Sa</span> Software-as-a-Service</h3>
-    <div class="content_left">
-      <p>
+    <h3><span>Sa</span> Software-as-a-Service</h3>      
+      <div class="content_top_section">
+        <p>
         Use what you want, when you want, and where you want. Nucleus’ SaaS model was developed to help you save time and reduce overhead. With no software installs, maintenance fees or upgrade costs, Nucleus makes life simple.
-      </p>
-    </div>
+        </p>
+      </div>
       <%= render :partial => 'flipped_box_links', :locals => {:element_type => "yellow_video"} %>
+      <div class="next_trigger">
+        <%= link_to raw("Next Element &raquo;"), "#e40", :class => "next_element_trigger", :parent_box => "#e50" %>
+      </div>
   </div>
 </div>

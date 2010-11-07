@@ -7,12 +7,15 @@
     <%= image_tag("/images/grey_a_icon.png", :alt => "Abuse") %>
   </div>
   <div class="content_bottom">
-    <h3><span>A</span> Abuse</h3>
-    <div class="content_left">
-      <p>
+    <h3><span>A</span> Abuse</h3>      
+      <div class="content_top_section">
+        <p>
         Billing abuse is the precursor to fraud. It takes the face of upcoding, modifier manipulation, unbundling and excessive services. Citing sicker patients, superior care or unfair compensation, some providers feel justified in bending the truth. That doesn’t make it right.
-      </p>
-    </div>
+        </p>
+      </div>
       <%= render :partial => 'flipped_box_links', :locals => {:element_type => "grey_video"} %>
+      <div class="next_trigger">
+        <%= link_to raw("Next Element &raquo;"), "#e9", :class => "next_element_trigger", :parent_box => "#e9" %>
+      </div>
   </div>
 </div>

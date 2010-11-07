@@ -7,12 +7,15 @@
     <%= image_tag("/images/green_aa_icon.png", :alt => "Happier Users") %>
   </div>
   <div class="content_bottom">
-    <h3><span>Hu</span> Happier Users</h3>
-    <div class="content_left">
-      <p>
+    <h3><span>Hu</span> Happier Users</h3>      
+      <div class="content_top_section">
+        <p>
         The wrong payment integrity software wastes time and energy. Nucleus gives your team powerful views and a friendly, intuitive interface that will turn your claims processing and SIU staff into happier, more efficient users.
-      </p>
-    </div>
+        </p>
+      </div>
       <%= render :partial => 'flipped_box_links', :locals => {:element_type => "red_video"} %>
+      <div class="next_trigger">
+        <%= link_to raw("Next Element &raquo;"), "#e50", :class => "next_element_trigger", :parent_box => "#e50" %>
+      </div>
   </div>
 </div>

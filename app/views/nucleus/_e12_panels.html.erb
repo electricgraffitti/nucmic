@@ -7,12 +7,15 @@
     <%= image_tag("/images/green_ps_icon.png", :alt => "Prepayment Solutions") %>
   </div>
   <div class="content_bottom">
-    <h3><span>Ps</span> Prepayment Solutions</h3>
-    <div class="content_left">
+    <h3><span>Ps</span> Prepayment Solutions</h3>      
+    <div class="content_top_section">
       <p>
-        Each of HCI’s solutions help you detect and prevent fraud, waste and abuse before claims are paid. When you detect improper payments before the check gets cut, you eliminate the hassle and expense of pay and chase.
+      Each of HCI’s solutions help you detect and prevent fraud, waste and abuse before claims are paid. When you detect improper payments before the check gets cut, you eliminate the hassle and expense of pay and chase.
       </p>
     </div>
-      <%= render :partial => 'flipped_box_links', :locals => {:element_type => "green_video"} %>
+    <%= render :partial => 'flipped_box_links', :locals => {:element_type => "green_video"} %>
+    <div class="next_trigger">
+      <%= link_to raw("Next Element &raquo;"), "#e13", :class => "next_element_trigger", :parent_box => "#e1" %>
+    </div>
   </div>
 </div>

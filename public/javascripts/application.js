@@ -57,15 +57,37 @@ var scroll = {
   },
   
   boxNavToggle: function() {
-    var $bnTrigger = $('#elements .content_right a');
+    var $bnTrigger = $('#elements .element.color_box .content_bottom_section a');
     
     $bnTrigger.click(function(e) {
-      var boxhref = $(this).attr("href");
-      e.preventDefault();
+	    var boxhref = $(this).attr("href");
+			var icon = $(this).attr("parent_box");
+			
+			e.preventDefault();
+			e.stopPropagation();
+
+			nav.setActiveIconNav(icon);
+			nav.setActiveSubNav(boxhref);
       scroll.setScroll(boxhref);
+
     });
     
   },
+
+	nextTriggers: function() {
+		var nTrigger = $("#elements a.next_element_trigger");
+		nTrigger.live("click", function(e) {
+			var boxhref = $(this).attr("href");
+			var icon = $(this).attr("parent_box");
+			
+			e.preventDefault();
+			e.stopPropagation();
+
+			nav.setActiveIconNav(icon);
+			nav.setActiveSubNav(boxhref);
+      scroll.setScroll(boxhref);
+		});
+	},
   
   subNavToggle: function() {
     var $snTrigger = $('#sub_nav li a');
@@ -163,6 +185,7 @@ var scroll = {
 		scroll.homeNavToggle();
 		scroll.microTriggers();
 		scroll.elementTriggers();
+		scroll.nextTriggers();
   }
   
 };
@@ -206,16 +229,16 @@ var flip = {
 
 var video = {
 	
-	setFlowPlayer: function(d,l) {
+	setFlowPlayer: function() {
 		flowplayer(
 			// The Player div passed in from args
-			d,
+			"player",
 			
 			// The path to the flowplayer swf
 			"/flowplayer-3.2.5.swf",
 			
 			// Video URL from args
-			l,
+			"/videos/meet_nucleus.f4v",
 			
 			// Config Options
 			{
@@ -226,15 +249,59 @@ var video = {
 	
 	triggerVideo: function() {
 		var $trigger = $('.video_trigger');
-		var $video_div = $trigger.attr('video_panel');
-		
 		$trigger.live('click', function(e) {
-			console.log("watchin video bitches");
+		  player.load();
+		  player.play();
+		  return false;
 		});
 		
 	}
 	
 };
+
+var player = $f("player", 
+		// Flash Configs
+		{
+		  src: "/flowplayer-3.2.5.swf",
+		  wmode: "transparent",
+		  bgcolor: "none"
+		}, 
+		//  Player Configs
+		{
+		  // key: '#$45a5242c3cfddf0c3cb',
+		  play: {opacity: 0},
+		  clip: {
+		    url: "/videos/meet_nucleus.f4v",
+		    autoPlay: true,
+		    backgroundColor: 'transparent',
+    
+		    onLoad: function() {
+					player.play();
+				},
+    
+		    // onPause: function(){ 
+		    //   player.hide();
+		    //   document.getElementById("nucleus_main_video").style.display="none";
+		    // },
+		    // 
+		    // onStop: function(){ 
+		    //   player.hide();
+		    //   document.getElementById("nucleus_main_video").style.display="none";
+		    // },
+		    // 
+		    // onFinish: function(){ 
+		    //   player.hide();
+		    //   document.getElementById("nucleus_main_video").style.display="none";
+		    // }
+    
+		  },
+		  play: { 
+		      label: null
+		  },
+		  plugins:  { 
+		    controls: null 
+		  }
+});
 
 var app = {
 	

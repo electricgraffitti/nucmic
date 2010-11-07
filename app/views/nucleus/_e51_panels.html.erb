@@ -7,12 +7,15 @@
     <%= image_tag("/images/yellow_si_icon.png", :alt => "Seamless Integration") %>
   </div>
   <div class="content_bottom">
-    <h3><span>Si</span> Seamless Integration</h3>
-    <div class="content_left">
-      <p>
+    <h3><span>Si</span> Seamless Integration</h3>      
+      <div class="content_top_section">
+        <p>
         Working well with others is a Nucleus strong suit. Integrating seamlessly with your current payment processes, from legacy applications to the latest payment platforms, Nucleus is ready to fight fraud alongside all your vendors.
-      </p>
-    </div>
+        </p>
+      </div>
       <%= render :partial => 'flipped_box_links', :locals => {:element_type => "yellow_video"} %>
+      <div class="next_trigger">
+        <%= link_to raw("Next Element &raquo;"), "#e57", :class => "next_element_trigger", :parent_box => "#e57" %>
+      </div>
   </div>
 </div>

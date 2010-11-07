@@ -7,12 +7,15 @@
     <%= image_tag("/images/blue_id_icon.png", :alt => "Idea Driven") %>
   </div>
   <div class="content_bottom">
-    <h3><span>Id</span> Idea Driven</h3>
-    <div class="content_left">
-      <p>
+    <h3><span>Id</span> Idea Driven</h3>      
+      <div class="content_top_section">
+        <p>
         Take part in the evolution of Nucleus. Mixing the latest in social media and crowd &mdash; sourcing technology, you can share feedback, brainstorm with other users and post ideas to improve Nucleus. You have a voice. We’re listening.
-      </p>
-    </div>
+        </p>
+      </div>
       <%= render :partial => 'flipped_box_links', :locals => {:element_type => "blue_video"} %>
+      <div class="next_trigger">
+        <%= link_to raw("Next Element &raquo;"), "#e28", :class => "next_element_trigger", :parent_box => "#e5" %>
+      </div>
   </div>
 </div>

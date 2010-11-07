@@ -7,12 +7,15 @@
     <%= image_tag("/images/dci_icon.png", :alt => "DentalClaim Insight") %>
   </div>
   <div class="content_bottom">
-    <h3><span>Dci</span> DentalClaim Insight</h3>
-    <div class="content_left">
-      <p>
+    <h3><span>Dci</span> DentalClaim Insight</h3>      
+      <div class="content_top_section">
+        <p>
         Get the definitive dental claim solution that delivers definitive results. DCI helps you prevent dental FWA with cutting-edge technology and clinical validation. Get rapid, state-compliant professional review from Certified Dental Consultants and start saving.
-      </p>
-    </div>
-      <%= render :partial => 'flipped_box_links', :locals => {:element_type => "solid_hci_blue_video"} %>
+        </p>
+      </div>
+      <%= render :partial => 'flipped_box_links', :locals => {:element_type => "solution_video"} %>
+      <div class="next_trigger">
+        <%= link_to raw("Next Element &raquo;"), "#e21", :class => "next_element_trigger", :parent_box => "#e9" %>
+      </div>
   </div>
 </div>

@@ -7,12 +7,15 @@
     <%= image_tag("/images/rxi_icon.png", :alt => "PharmaClaim Insight") %>
   </div>
   <div class="content_bottom">
-    <h3><span>Rxi</span> PharmqClaim Insight</h3>
-    <div class="content_left">
-      <p>
-        Get the latest pharmacy FWA detection solu- tion that offers just the right dose of savings. RxI was created to isolate suspect patient and provider activity while strengthening payment precision. Cutting-edge software and Rx Coding Specialists help you get better results.
-      </p>
-    </div>
-      <%= render :partial => 'flipped_box_links', :locals => {:element_type => "solid_hci_dark_blue_video"} %>
+    <h3><span>Rxi</span> PharmaClaim Insight</h3>
+      <div class="content_top_section">
+        <p>
+        Get the latest pharmacy FWA detection solution that offers just the right dose of savings. RxI was created to isolate suspect patient and provider activity while strengthening payment precision. Cutting-edge software and Rx Coding Specialists help you get better results.
+        </p>
+      </div>
+      <%= render :partial => 'flipped_box_links', :locals => {:element_type => "solution_video"} %>
+      <div class="next_trigger">
+        <%= link_to raw("Next Element &raquo;"), "#e43", :class => "next_element_trigger", :parent_box => "#e9" %>
+      </div>
   </div>
 </div>

@@ -7,12 +7,15 @@
     <%= image_tag("/images/red_ap_icon.png", :alt => "Accelerated Productivity") %>
   </div>
   <div class="content_bottom">
-    <h3><span>Ap</span> Accelerated Productivity</h3>
-    <div class="content_left">
-      <p>
+    <h3><span>Ap</span> Accelerated Productivity</h3>      
+      <div class="content_top_section">
+        <p>
         Give your payment integrity program a shot in the arm. Nucleus helps accelerate user productivity with its powerful tools and advanced technology. You’ll measure gains in cases opened, claims impacted and dollars saved.
-      </p>
-    </div>
+        </p>
+      </div>
       <%= render :partial => 'flipped_box_links', :locals => {:element_type => "red_video"} %>
+      <div class="next_trigger">
+        <%= link_to raw("Next Element &raquo;"), "#e27", :class => "next_element_trigger", :parent_box => "#e36" %>
+      </div>
   </div>
 </div>
