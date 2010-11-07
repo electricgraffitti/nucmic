@@ -51,7 +51,9 @@ var scroll = {
     $tnTrigger.click(function(e) {
       var pagehref = $(this).attr("href");
       e.preventDefault();
-      scroll.setScroll(pagehref);
+			nav.resetActive();
+			$(this).addClass('active');
+      $('#bd').scrollTo($(pagehref), 800);
     });
     
   },
@@ -94,9 +96,12 @@ var scroll = {
     
     $snTrigger.click(function(e) {
       var subhref = $(this).attr("href");
+			var icon = $(this).attr("parent_box");
+			
       e.preventDefault();
 			nav.resetActive();
-			$(this).addClass('active');
+			
+			nav.setActiveIconNav(icon);
       scroll.setScroll(subhref);
     });
     

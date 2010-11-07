@@ -1,7 +1,7 @@
 <div id="top_nav">
   <ul>
     <li>
-       <%= link_to raw("<span>[</span> The Elements of Nucleus <span>]</span>"), "#micro_elements", :class => "page_trigger" %>
+       <%= link_to raw("<span>[</span> The Elements of Nucleus <span>]</span>"), "#micro_elements", :class => "page_trigger active" %>
     </li>
     <li>
       <%= link_to raw("<span>[</span> Request a demo <span>]</span>"), "#contact_form", :class => "page_trigger" %>
@@ -30,45 +30,45 @@
 
 <div id="sub_nav" class="green">
   <ul id="core_elements_sub_nav" class="green">
-    <li><%= link_to raw("<span>[</span> Clinical Touch <span>]</span>"), "#e2" %></li>
-    <li><%= link_to raw("<span>[</span> Prepayment Solutions <span>]</span>"), "#e12" %></li>
-    <li><%= link_to raw("<span>[</span> Great Service <span>]</span>"), "#e13" %></li>
-    <li><%= link_to raw("<span>[</span> User Friendly <span>]</span>"), "#e14" %></li>
-    <li><%= link_to raw("<span>[</span> Advanced Analytics <span>]</span>"), "#e24" %></li>
+    <li><%= link_to raw("<span>[</span> Clinical Touch <span>]</span>"), "#e2", :parent_box => "#e1" %></li>
+    <li><%= link_to raw("<span>[</span> Prepayment Solutions <span>]</span>"), "#e12", :parent_box => "#e1" %></li>
+    <li><%= link_to raw("<span>[</span> Great Service <span>]</span>"), "#e13", :parent_box => "#e1" %></li>
+    <li><%= link_to raw("<span>[</span> User Friendly <span>]</span>"), "#e14", :parent_box => "#e1" %></li>
+    <li><%= link_to raw("<span>[</span> Advanced Analytics <span>]</span>"), "#e24", :parent_box => "#e1" %></li>
   </ul>
   <ul id="results_sub_nav" class="red hidden">
-    <li><%= link_to raw("<span>[</span> Better Results <span>]</span>"), "#e15" %></li>
-    <li><%= link_to raw("<span>[</span> Total Insight <span>]</span>"), "#e25" %></li>
-    <li><%= link_to raw("<span>[</span> Accelerated Productivity <span>]</span>"), "#e26" %></li>
-    <li><%= link_to raw("<span>[</span> Claim Neutral <span>]</span>"), "#e27" %></li>
-    <li><%= link_to raw("<span>[</span> Happier Users <span>]</span>"), "#e37" %></li>
+    <li><%= link_to raw("<span>[</span> Better Results <span>]</span>"), "#e15", :parent_box => "#e36" %></li>
+    <li><%= link_to raw("<span>[</span> Total Insight <span>]</span>"), "#e25", :parent_box => "#e36" %></li>
+    <li><%= link_to raw("<span>[</span> Accelerated Productivity <span>]</span>"), "#e26", :parent_box => "#e36" %></li>
+    <li><%= link_to raw("<span>[</span> Claim Neutral <span>]</span>"), "#e27", :parent_box => "#e36" %></li>
+    <li><%= link_to raw("<span>[</span> Happier Users <span>]</span>"), "#e37", :parent_box => "#e36" %></li>
   </ul>
   <ul id="technology_sub_nav" class="blue hidden">
-    <li><%= link_to raw("<span>[</span> Social Messaging <span>]</span>"), "#e6" %></li>
-    <li><%= link_to raw("<span>[</span> Work Smarter <span>]</span>"), "#e16" %></li>
-    <li><%= link_to raw("<span>[</span> Total Customization <span>]</span>"), "#e17" %></li>
-    <li><%= link_to raw("<span>[</span> Idea-driven <span>]</span>"), "#e18" %></li>
-    <li><%= link_to raw("<span>[</span> Help Center <span>]</span>"), "#e28" %></li>
+    <li><%= link_to raw("<span>[</span> Social Messaging <span>]</span>"), "#e6", :parent_box => "#e5" %></li>
+    <li><%= link_to raw("<span>[</span> Work Smarter <span>]</span>"), "#e16", :parent_box => "#e5" %></li>
+    <li><%= link_to raw("<span>[</span> Total Customization <span>]</span>"), "#e17", :parent_box => "#e5" %></li>
+    <li><%= link_to raw("<span>[</span> Idea-driven <span>]</span>"), "#e18", :parent_box => "#e5" %></li>
+    <li><%= link_to raw("<span>[</span> Help Center <span>]</span>"), "#e28", :parent_box => "#e5" %></li>
   </ul>
   <ul id="tools_sub_nav" class="yellow hidden">
-    <li><%= link_to raw("<span>[</span> Real-time Processing <span>]</span>"), "#e29" %></li>
-    <li><%= link_to raw("<span>[</span> Software-as-a-Service <span>]</span>"), "#e39" %></li>
-    <li><%= link_to raw("<span>[</span> Absolute Security <span>]</span>"), "#e40" %></li>
-    <li><%= link_to raw("<span>[</span> Easily Scalable <span>]</span>"), "#e41" %></li>
-    <li><%= link_to raw("<span>[</span> Seamless Integration <span>]</span>"), "#e51" %></li>
+    <li><%= link_to raw("<span>[</span> Real-time Processing <span>]</span>"), "#e29", :parent_box => "#e50" %></li>
+    <li><%= link_to raw("<span>[</span> Software-as-a-Service <span>]</span>"), "#e39", :parent_box => "#e50" %></li>
+    <li><%= link_to raw("<span>[</span> Absolute Security <span>]</span>"), "#e40", :parent_box => "#e50" %></li>
+    <li><%= link_to raw("<span>[</span> Easily Scalable <span>]</span>"), "#e41", :parent_box => "#e50" %></li>
+    <li><%= link_to raw("<span>[</span> Seamless Integration <span>]</span>"), "#e51", :parent_box => "#e50" %></li>
   </ul>
   <ul id="problem_elements_sub_nav" class="grey hidden">
-    <li><%= link_to raw("<span>[</span> Fraud <span>]</span>"), "#e58" %></li>
-    <li><%= link_to raw("<span>[</span> Waste <span>]</span>"), "#e59" %></li>
-    <li><%= link_to raw("<span>[</span> Abuse <span>]</span>"), "#e60" %></li>
+    <li><%= link_to raw("<span>[</span> Fraud <span>]</span>"), "#e58", :parent_box => "#e57" %></li>
+    <li><%= link_to raw("<span>[</span> Waste <span>]</span>"), "#e59", :parent_box => "#e57" %></li>
+    <li><%= link_to raw("<span>[</span> Abuse <span>]</span>"), "#e60", :parent_box => "#e57" %></li>
   </ul>
   <ul id="solutions_sub_nav" class="white hidden">
-    <li><%= link_to raw("<span>[</span> PhysicianClaim Insight <span>]</span>"), "#e9" %></li>
-    <li><%= link_to raw("<span>[</span> DentalClaim Insight <span>]</span>"), "#e20" %></li>
-    <li><%= link_to raw("<span>[</span> OncologyClaim Insight <span>]</span>"), "#e21" %></li>
-    <li><%= link_to raw("<span>[</span> FacilityClaim Insight <span>]</span>"), "#e31" %></li>
-    <li><%= link_to raw("<span>[</span> PharmaClaim Insight <span>]</span>"), "#e32" %></li>
-    <li><%= link_to raw("<span>[</span> CaseTracker Insight <span>]</span>"), "#e43" %></li>
+    <li><%= link_to raw("<span>[</span> PhysicianClaim Insight <span>]</span>"), "#e9", :parent_box => "#e9" %></li>
+    <li><%= link_to raw("<span>[</span> DentalClaim Insight <span>]</span>"), "#e20", :parent_box => "#e9" %></li>
+    <li><%= link_to raw("<span>[</span> OncologyClaim Insight <span>]</span>"), "#e21", :parent_box => "#e9" %></li>
+    <li><%= link_to raw("<span>[</span> FacilityClaim Insight <span>]</span>"), "#e31", :parent_box => "#e9" %></li>
+    <li><%= link_to raw("<span>[</span> PharmaClaim Insight <span>]</span>"), "#e32", :parent_box => "#e9" %></li>
+    <li><%= link_to raw("<span>[</span> CaseTracker Insight <span>]</span>"), "#e43", :parent_box => "#e9" %></li>
   </ul>
   <ul id="video_sub_nav" class="black hidden">
     <li><%= link_to raw("<span>[</span> Core Elements <span>]</span>"), "#e63" %></li>
