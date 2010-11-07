@@ -199,10 +199,6 @@ var scroll = {
 		
 	},
 	
-	setiPadScroll: function() {
-    $('#bd').jScrollTouch();
-  },
-	
 	setScroll: function(link) {
 		var el = $(link);
 		
@@ -225,7 +221,6 @@ var scroll = {
 		scroll.nextTriggers();
 		scroll.elementBackDemoTriggers();
 		scroll.videoBoxTriggers();
-		scroll.setiPadScroll();
   }
   
 };
@@ -263,8 +258,6 @@ var flip = {
       color:'#ffffff'
     });
     el.addClass('flipped');
-		$flipContent.find('a.video_trigger').click();
-		
 	}
   
 };

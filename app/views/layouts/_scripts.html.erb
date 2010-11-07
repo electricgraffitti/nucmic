@@ -6,3 +6,7 @@
 
 <%# Load in the application.js very last %>
 <%= javascript_include_tag 'application' %>
+
+<% if ipad %>
+  <%= javascript_include_tag 'ipad' %>
+<% end %>
