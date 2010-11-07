@@ -33,7 +33,7 @@
           </div>
           <div class="form_field">
             <%= label_tag(:title, "Title/Responsibility") %><br/>
-            <%= text_field_tag(:title, nil ,:class => "validate(required, username)") %>
+            <%= text_field_tag(:title, nil ,:class => "validate(required)") %>
           </div>
           <div class="form_field">
             <%= label_tag(:email, "Email") %><br/>
@@ -41,7 +41,7 @@
           </div>
           <div class="form_field">
             <%= label_tag(:company, "Company") %><br/>
-            <%= text_field_tag(:company, nil ,:class => "validate(required, username)") %>
+            <%= text_field_tag(:company, nil ,:class => "validate(required)") %>
           </div>
           <div class="form_field">
             <%= submit_tag("Request a Demo") %>

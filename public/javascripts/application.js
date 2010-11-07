@@ -180,7 +180,7 @@ var scroll = {
 	},
 
 	elementTriggers: function() {
-		var $element = $(".element");
+		var $element = $(".element.active_element");
 		
 		$element.click(function() {
 			var eid = "#" + $(this).attr("id");
