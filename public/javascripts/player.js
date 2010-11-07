@@ -2,12 +2,12 @@ $(document).ready(function() {
 	player = $f("ipad",
 	  // Flash Configs
 	  {
-	     src: "flowplayer-3.2.5.swf",
+	     src: "flowplayer.commercial-3.2.5",
 	     wmode: 'opaque'
 	  },
   	// Player Configs
   	{ 
-    	// key: '#$45a5242c3cfddf0c3cb',
+    	key: '#$c7d15eb8e21835f8a70',
 
     	play: {opacity: 0},
 
