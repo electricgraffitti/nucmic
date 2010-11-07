@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	player = $f("player",
+	player = $f("ipad",
 	  // Flash Configs
 	  {
 	     src: "flowplayer-3.2.5.swf",
@@ -70,6 +70,6 @@ $(document).ready(function() {
 	
     	playlist: []
 
-  	});
+  	}).ipad();
 	
 });

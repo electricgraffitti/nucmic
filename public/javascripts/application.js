@@ -199,6 +199,10 @@ var scroll = {
 		
 	},
 	
+	setiPadScroll: function() {
+    $('#bd').jScrollTouch();
+  },
+	
 	setScroll: function(link) {
 		var el = $(link);
 		
@@ -221,6 +225,7 @@ var scroll = {
 		scroll.nextTriggers();
 		scroll.elementBackDemoTriggers();
 		scroll.videoBoxTriggers();
+		scroll.setiPadScroll();
   }
   
 };
@@ -235,7 +240,7 @@ var flip = {
 			} else {
 				flip.autoFlip(el);
 			}
-		}, 2000);
+		}, 1000);
 	},
 	
 	revertFlipped: function() {

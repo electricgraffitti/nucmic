@@ -760,7 +760,7 @@ label.error {
 	width: 114px;
 }
 .color_box .content_bottom_section ul li {
-	width: 140px;
+	width: 141px;
 }
 .solid_grey.color_box .content_bottom_section ul li {
 	width: 90px;
@@ -928,6 +928,81 @@ label.error {
 #elements #e60 .content_top_section {
 	width: 342px;
 	margin-bottom: 12px;
+}
+/* Element back widths for Webkit (Safari and Chrome)  */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	#elements #e2 .content_top_section {
+		width: 352px;
+	}
+	#elements #e6 .content_top_section {
+		width: 365px;
+		margin-bottom: 25px;
+	}
+	#elements #e9 .content_top_section {
+		width: 365px;
+		margin-bottom: 12px;
+	}
+	#elements #e12 .content_top_section {
+		width: 361px;
+	}
+	#elements #e13 .content_top_section {
+		width: 375px;
+	}
+	#elements #e14 .content_top_section {
+		width:373px;
+	}
+	#elements #e15 .content_top_section {
+		width:377px;
+	}
+	#elements #e16 .content_top_section {
+		width:380px;
+	}
+	#elements #e17 .content_top_section {
+		width:375px;
+		margin-bottom: 25px;
+	}
+	#elements #e18 .content_top_section {
+		width:377px;
+		margin-bottom: 25px;
+	}
+	#elements #e21 .content_top_section {
+		width:350px;
+	}
+	#elements #e25 .content_top_section {
+		width:390px;
+	}
+	#elements #e26 .content_top_section {
+		width:383px;
+		margin-bottom: 25px;
+	}
+	#elements #e28 .content_top_section {
+		width:380px;
+	}
+	#elements #e32 .content_top_section {
+		width:360px;
+	}
+	#elements #e37 .content_top_section {
+		width:371px;
+	}
+	#elements #e39 .content_top_section {
+		width:387px;
+	}
+	#elements #e51 .content_top_section {
+		width:383px;
+		margin-bottom: 25px;
+	}
+	#elements #e58 .content_top_section {
+		width: 383px;
+		margin-bottom: 13px;
+	}
+	#elements #e59 .content_top_section {
+		width: 417px;
+		margin-bottom: 12px;
+	}
+	#elements #e60 .content_top_section {
+		width: 349px;
+		margin-bottom: 12px;
+	}
 }
 /********************************************************************************************/
 /**************************************************************** MICRO ELEMENTS ************/
@@ -1204,7 +1279,7 @@ div.form_field {
 @media screen and (-webkit-min-device-pixel-ratio:0) {	
 	#tiptip_content {
 		padding: 4px 8px 5px 8px;
-		background-color: rgba(45,45,45,0.88);
+		background-color: #fff;
 	}
 	#tiptip_holder.tip_bottom #tiptip_arrow_inner { 
 		border-bottom-color: rgba(45,45,45,0.88);
@@ -1271,7 +1346,7 @@ div.overlay a.close {
 }
  
 /* original size of the player */ 
-#player, #player embed, #player object { 
+#ipad, #ipad embed, #ipad object { 
   height:288px;
   left:0px;
   position:absolute;
@@ -1280,7 +1355,7 @@ div.overlay a.close {
 } 
  
 /* absolute positioning of the player */ 
-#player embed, #player object { 
+#ipad embed, #ipad object { 
 	position:relative; 
 	/* layer as the topmost element */ 
 	z-index:10000; 
