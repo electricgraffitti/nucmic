@@ -4,7 +4,7 @@
        <%= link_to raw("<span>[</span> The Elements of Nucleus <span>]</span>"), "#micro_elements", :class => "page_trigger active" %>
     </li>
     <li>
-      <%= link_to raw("<span>[</span> Request a demo <span>]</span>"), "#contact_form", :class => "page_trigger" %>
+      <%= link_to raw("<span>[</span> Request a demo <span>]</span>"), "#contact_form", :class => "page_trigger", :id => "rDemo" %>
     </li>
     <li>
       <%= link_to raw("<span>[</span> Visit HealthCare Insight <span>]</span>"), "http://www.hcinsight.com" %>
@@ -24,7 +24,7 @@
     <li id="nav7"><%= link_to "Video", "#e63", :trigger_color => "black" %></li>
   </ul>
   <div id="tagline">
-    <%= image_tag("/images/tagline.png", :alt => "Be in your element") %>
+    <%= link_to image_tag("/images/tagline.png", :alt => "Be in your element"), "", :class => "video_trigger", :rel => "div.overlay" %>
   </div>
 </div>
 
@@ -71,9 +71,10 @@
     <li><%= link_to raw("<span>[</span> CaseTracker Insight <span>]</span>"), "#e43", :parent_box => "#e9" %></li>
   </ul>
   <ul id="video_sub_nav" class="black hidden">
-    <li><%= link_to raw("<span>[</span> Core Elements <span>]</span>"), "#e63" %></li>
-    <li><%= link_to raw("<span>[</span> Results <span>]</span>"), "#e63" %></li>
-    <li><%= link_to raw("<span>[</span> Technology <span>]</span>"), "#e63" %></li>
-    <li><%= link_to raw("<span>[</span> Tools <span>]</span>"), "#e63" %></li>
+    <li><%= link_to raw("<span>[</span> Core Elements <span>]</span>"), "videos/meet_nucleus.f4v", :class => "sub_nav_video_trigger", :rel => "div.overlay" %></li>
+    <li><%= link_to raw("<span>[</span> Results <span>]</span>"), "videos/meet_nucleus.f4v", :class => "sub_nav_video_trigger", :rel => "div.overlay" %></li>
+    <li><%= link_to raw("<span>[</span> Technology <span>]</span>"), "videos/meet_nucleus.f4v", :class => "sub_nav_video_trigger", :rel => "div.overlay" %></li>
+    <li><%= link_to raw("<span>[</span> Tools <span>]</span>"), "videos/meet_nucleus.f4v", :class => "sub_nav_video_trigger", :rel => "div.overlay" %></li>
+    <li><%= link_to raw("<span>[</span> Solutions <span>]</span>"), "videos/meet_nucleus.f4v", :class => "sub_nav_video_trigger", :rel => "div.overlay" %></li>
   </ul>
 </div>

@@ -94,15 +94,19 @@ var scroll = {
   subNavToggle: function() {
     var $snTrigger = $('#sub_nav li a');
     
-    $snTrigger.click(function(e) {
-      var subhref = $(this).attr("href");
-			var icon = $(this).attr("parent_box");
-			
-      e.preventDefault();
+    $snTrigger.click(function(e) {				
+			e.preventDefault();
 			nav.resetActive();
-			
-			nav.setActiveIconNav(icon);
-      scroll.setScroll(subhref);
+						
+			if ($(this).hasClass("sub_nav_video_trigger")) {
+				$(this).addClass('active');
+				video.subNavVideoTrigger($(this));
+			} else {
+				var subhref = $(this).attr("href");
+				var icon = $(this).attr("parent_box");
+				nav.setActiveIconNav(icon);
+	      scroll.setScroll(subhref);
+			}
     });
     
   },
@@ -130,6 +134,30 @@ var scroll = {
 			scroll.setScroll(pagehref);
 		});
 		
+	},
+	
+	elementBackDemoTriggers: function() {
+		var $rdTrigger = $('#elements a.demo');
+		
+		$rdTrigger.live('click', function(e) {
+			var pagehref = $(this).attr("href");
+			var demoLink = $("#rDemo");
+      e.preventDefault();
+			e.stopPropagation();
+			nav.resetActive();
+			demoLink.addClass('active');
+      $('#bd').scrollTo($(pagehref), 800);
+		});
+		
+	},
+	
+	videoBoxTriggers: function() {
+		var $triggers = $("#elements .element.solid_black a.reg_video_trigger");
+		$triggers.click(function(e) {
+			e.preventDefault();
+			e.stopPropagation();	
+			video.triggerVideo($(this));
+		});
 	},
 	
 	microTriggers: function() {
@@ -191,6 +219,8 @@ var scroll = {
 		scroll.microTriggers();
 		scroll.elementTriggers();
 		scroll.nextTriggers();
+		scroll.elementBackDemoTriggers();
+		scroll.videoBoxTriggers();
   }
   
 };
@@ -234,79 +264,47 @@ var flip = {
 
 var video = {
 	
-	setFlowPlayer: function() {
-		flowplayer(
-			// The Player div passed in from args
-			"player",
-			
-			// The path to the flowplayer swf
-			"/flowplayer-3.2.5.swf",
-			
-			// Video URL from args
-			"/videos/meet_nucleus.f4v",
-			
-			// Config Options
-			{
-				
-				
-			});
+	liveVideoTrigger: function() {
+		var $trigger = $('.video_trigger');	
+		$trigger.live("click", function(e) {
+			e.preventDefault();
+			e.stopPropagation();
+			video.triggerVideo($(this));
+		});
 	},
 	
-	triggerVideo: function() {
-		var $trigger = $('.video_trigger');
-		$trigger.live('click', function(e) {
-		  player.load();
-		  player.play();
-		  return false;
+	regVideoTrigger: function() {
+		var $trigger = $(".reg_video_trigger");
+		$trigger.live("click", function(e) {
+			e.preventDefault();
+			e.stopPropagation();
+			video.triggerVideo($(this));
 		});
-		
-	}
+	},
 	
-};
+	subNavVideoTrigger: function(el) {
+		video.triggerVideo(el);
+	},
+	
+	triggerVideo: function(el) {
+		el.overlay({ 
+		 expose: {
+		  color: '#000',
+		  opacity: 0.85,
+		  closeSpeed: 700
+		 },
 
-var player = $f("player", 
-		// Flash Configs
-		{
-		  src: "/flowplayer-3.2.5.swf",
-		  wmode: "transparent",
-		  bgcolor: "none"
-		}, 
-		//  Player Configs
-		{
-		  // key: '#$45a5242c3cfddf0c3cb',
-		  play: {opacity: 0},
-		  clip: {
-		    url: "/videos/meet_nucleus.f4v",
-		    autoPlay: true,
-		    backgroundColor: 'transparent',
-    
-		    onLoad: function() {
-					player.play();
-				},
-    
-		    // onPause: function(){ 
-		    //   player.hide();
-		    //   document.getElementById("nucleus_main_video").style.display="none";
-		    // },
-		    // 
-		    // onStop: function(){ 
-		    //   player.hide();
-		    //   document.getElementById("nucleus_main_video").style.display="none";
-		    // },
-		    // 
-		    // onFinish: function(){ 
-		    //   player.hide();
-		    //   document.getElementById("nucleus_main_video").style.display="none";
-		    // }
-    
-		  },
-		  play: { 
-		      label: null
-		  },
-		  plugins:  { 
-		    controls: null 
-		  }
-});
+		 onLoad: function() {
+		  var v = this.getTrigger().attr("href");
+		 	player.load().play(v);
+		 },
+
+		 onClose: function() {
+		  player.unload();
+		 }
+		});
+	}	
+};
 
 var app = {
 	
@@ -341,7 +339,7 @@ var app = {
     app.setTips();
 		app.formValidation();
 		scroll.loadTriggers();
-		video.triggerVideo();
+		video.liveVideoTrigger();
 	}
 	
 };

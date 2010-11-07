@@ -206,15 +206,15 @@
     var fOffset = field.offset();
 
     errorContainer.css({
-      left: fOffset.left + field.width() - 10,
-      top: fOffset.top - errorContainer.height()
+      right: "-121px",
+			zIndex: 20
     });
   };
   
   
   var positionContainer = function(errorContainer, field) {
     errorContainer.animate({
-      top: field.offset().top - errorContainer.height()
+      top: -39
     });
   };
   
