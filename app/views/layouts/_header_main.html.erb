@@ -23,9 +23,11 @@
     <li id="nav6"><%= link_to "Solutions", "#e9", :trigger_color => "white" %></li>
     <li id="nav7"><%= link_to "Video", "#e63", :trigger_color => "black" %></li>
   </ul>
-  <div id="tagline">
-    <%= link_to image_tag("/images/tagline.png", :alt => "Be in your element"), "", :class => "video_trigger", :rel => "div.overlay" %>
-  </div>
+  <% unless ipad %>
+    <div id="tagline">
+      <%= image_tag("/images/tagline.png", :alt => "Be in your element") %>
+    </div>
+  <% end %>
 </div>
 
 <div id="sub_nav" class="green">

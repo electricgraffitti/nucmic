@@ -36,26 +36,33 @@ $(document).ready(function() {
 	   			zIndex: 10
 	   		},
 	      controls: {
-	        sliderGradient: 'none',
-	        tooltipColor: '#5F747C',
-	        borderRadius: '0px',
-	        volumeSliderGradient: 'none',
-	        bufferColor: '#ffffff',
-	        progressColor: '#0b471d',
-	        progressGradient: 'medium',
-	        timeBgColor: '#555555',
-	        durationColor: '#ffffff',
-	        buttonOverColor: '#728B94',
-	        sliderColor: '#000000',
-	        volumeSliderColor: '#000000',
-	        buttonColor: '#3d4c43',
-	        bufferGradient: 'none',
-	        timeColor: '#051a0b',
-	        backgroundColor: '#000000',
-	        tooltipTextColor: '#ffffff',
-	        backgroundGradient: 'low',
-	        height: 20,
-	        opacity: 1.0
+					// display properties
+					bottom:0,
+					height:24,
+					zIndex:1,
+					backgroundColor: '#1a1a1a',
+					backgroundGradient: 'low',
+
+					// controlbar-specific configuration
+					fontColor: '#ffffff',
+					timeFontColor: '#333333',
+					autoHide: {
+						enabled: true,
+						fullscreenOnly: false,
+						hideDelay: 1000
+					},
+
+					// which buttons are visible and which are not?
+					play:true,
+					volume:true,
+					mute:false,
+					time:false,
+					stop:false,
+					playlist:false,
+					fullscreen:true,
+
+					// scrubber is a well-known nickname for the timeline/playhead combination
+					scrubber: true
 	      }
     	},
 

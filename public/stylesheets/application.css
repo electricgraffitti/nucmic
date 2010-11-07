@@ -162,10 +162,11 @@ label.error {
 }
 #icon_nav ul {
   width: 847px;
+	height: 69px;
 }
 #icon_nav ul li {
   width: 120px;
-  height: 69px;
+  height: 70px;
   margin-right: 1px;
 }
 #icon_nav ul li a {
@@ -864,50 +865,39 @@ label.error {
 /****Element Specific back side widths to accommodate the widow text****/
 #elements #e6 .content_top_section {
 	width: 360px;
-	margin-bottom: 25px;
 }
 #elements #e9 .content_top_section {
 	width: 365px;
-	margin-bottom: 12px;
 }
 #elements #e12 .content_top_section {
 	width: 355px;
-	margin-bottom: 25px;
 }
 #elements #e14 .content_top_section {
 	width:367px;
-	margin-bottom: 25px;
 }
 #elements #e15 .content_top_section {
 	width:375px;
-	margin-bottom: 25px;
 }
 #elements #e17 .content_top_section {
 	width:375px;
-	margin-bottom: 25px;
 }
 #elements #e18 .content_top_section {
 	width:375px;
-	margin-bottom: 25px;
 }
 #elements #e25 .content_top_section {
 	width:383px;
-	margin-bottom: 25px;
 }
 #elements #e26 .content_top_section {
 	width:383px;
-	margin-bottom: 25px;
 }
 #elements #e28 .content_top_section {
 	width:375px;
-	margin-bottom: 25px;
 }
 #elements #e32 .content_top_section {
 	width:360px;
 }
 #elements #e37 .content_top_section {
 	width:369px;
-	margin-bottom: 25px;
 }
 #elements #e39 .content_top_section {
 	width:383px;
@@ -923,11 +913,9 @@ label.error {
 }
 #elements #e59 .content_top_section {
 	width: 408px;
-	margin-bottom: 25px;
 }
 #elements #e60 .content_top_section {
 	width: 342px;
-	margin-bottom: 12px;
 }
 /* Element back widths for Webkit (Safari and Chrome)  */
 @media screen and (-webkit-min-device-pixel-ratio:0) {
@@ -936,11 +924,9 @@ label.error {
 	}
 	#elements #e6 .content_top_section {
 		width: 365px;
-		margin-bottom: 25px;
 	}
 	#elements #e9 .content_top_section {
 		width: 365px;
-		margin-bottom: 12px;
 	}
 	#elements #e12 .content_top_section {
 		width: 361px;
@@ -959,11 +945,9 @@ label.error {
 	}
 	#elements #e17 .content_top_section {
 		width:375px;
-		margin-bottom: 25px;
 	}
 	#elements #e18 .content_top_section {
 		width:377px;
-		margin-bottom: 25px;
 	}
 	#elements #e21 .content_top_section {
 		width:350px;
@@ -973,7 +957,6 @@ label.error {
 	}
 	#elements #e26 .content_top_section {
 		width:383px;
-		margin-bottom: 25px;
 	}
 	#elements #e28 .content_top_section {
 		width:380px;
@@ -989,19 +972,16 @@ label.error {
 	}
 	#elements #e51 .content_top_section {
 		width:383px;
-		margin-bottom: 25px;
 	}
 	#elements #e58 .content_top_section {
 		width: 383px;
-		margin-bottom: 13px;
+
 	}
 	#elements #e59 .content_top_section {
 		width: 417px;
-		margin-bottom: 12px;
 	}
 	#elements #e60 .content_top_section {
 		width: 349px;
-		margin-bottom: 12px;
 	}
 }
 /********************************************************************************************/

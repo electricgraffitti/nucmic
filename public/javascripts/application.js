@@ -263,6 +263,8 @@ var flip = {
       color:'#ffffff'
     });
     el.addClass('flipped');
+		$flipContent.find('a.video_trigger').click();
+		
 	}
   
 };
@@ -305,6 +307,7 @@ var video = {
 		 },
 
 		 onClose: function() {
+			player.pause();
 		  player.unload();
 		 }
 		});

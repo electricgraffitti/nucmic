@@ -1,0 +1,4 @@
+/* close button for overlay */ 
+div.overlay a.close { 
+	display: none;
+}
