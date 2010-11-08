@@ -2,7 +2,7 @@ $(document).ready(function() {
 	player = $f("ipad",
 	  // Flash Configs
 	  {
-	     src: "flowplayer.commercial-3.2.5",
+	     src: "flowplayer.commercial-3.2.5.swf",
 	     wmode: 'opaque'
 	  },
   	// Player Configs

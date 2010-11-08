@@ -98,7 +98,7 @@ var scroll = {
 						
 			if ($(this).hasClass("sub_nav_video_trigger")) {
 				$(this).addClass('active');
-				video.subNavVideoTrigger($(this));
+				video.triggerVideo($(this));
 			} else {
 				var subhref = $(this).attr("hash");
 				var icon = $(this).attr("parent_box");
@@ -271,9 +271,11 @@ var video = {
 	},
 	
 	regVideoTrigger: function() {
-		var $trigger = $("#elements #63 a.reg_video_trigger");
-		$trigger.click(function(e) {
-			app.eventHandler(e);
+		var rTrigger = $(".reg_video_trigger");
+		rTrigger.bind('click', function(e) {
+			e.stopPropagation();
+			// app.eventHandler(e);
+			console.log($(this));
 		});
 	},
 	
