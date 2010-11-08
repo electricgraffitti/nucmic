@@ -49,7 +49,7 @@ var scroll = {
     var $tnTrigger = $('#top_nav a.page_trigger');
     
     $tnTrigger.click(function(e) {
-      var pagehref = $(this).attr("href");
+      var pagehref = $(this).attr("hash");
       e.preventDefault();
 			nav.resetActive();
 			$(this).addClass('active');
@@ -62,7 +62,7 @@ var scroll = {
     var $bnTrigger = $('#elements .element.color_box .content_bottom_section a');
     
     $bnTrigger.click(function(e) {
-	    var boxhref = $(this).attr("href");
+	    var boxhref = $(this).attr("hash");
 			var icon = $(this).attr("parent_box");
 			
 			e.preventDefault();
@@ -79,10 +79,8 @@ var scroll = {
 	nextTriggers: function() {
 		var nTrigger = $("#elements a.next_element_trigger");
 		nTrigger.live('click', function(e) {
-			var boxhref = $(this).attr("href");
-			var icon = $(this).attr("parent_box");
-			console.log(boxhref);
-			
+			var boxhref = $(this).attr("hash");
+			var icon = $(this).attr("parent_box");			
 			app.eventHandler(e);
 			
 			nav.setActiveIconNav(icon);
@@ -102,7 +100,7 @@ var scroll = {
 				$(this).addClass('active');
 				video.subNavVideoTrigger($(this));
 			} else {
-				var subhref = $(this).attr("href");
+				var subhref = $(this).attr("hash");
 				var icon = $(this).attr("parent_box");
 				nav.setActiveIconNav(icon);
 	      scroll.setScroll(subhref);
@@ -116,7 +114,7 @@ var scroll = {
     
     $iconTrigger.click(function(e) {
 			e.preventDefault();
-      var panelhref = $(this).attr("href");
+      var panelhref = $(this).attr("hash");
 			var colorChip = $(this).attr('trigger_color');
 			nav.resetActive();
 			nav.setSubNav(colorChip);
@@ -129,7 +127,7 @@ var scroll = {
 		var $homeLink = $('.home_link');
 		
 		$homeLink.click(function(e) {
-			var pagehref = $(this).attr("href");
+			var pagehref = $(this).attr("hash");
 			e.preventDefault();
 			scroll.setScroll(pagehref);
 		});
@@ -140,7 +138,7 @@ var scroll = {
 		var $rdTrigger = $('#elements a.demo');
 		
 		$rdTrigger.live('click', function(e) {
-			var pagehref = $(this).attr("href");
+			var pagehref = $(this).attr("hash");
 			var demoLink = $("#rDemo");
       e.preventDefault();
 			e.stopPropagation();
@@ -165,7 +163,7 @@ var scroll = {
 		
 		$microLink.click(function(e) {
 			e.preventDefault();
-			var pagehref = $(this).attr("href");
+			var pagehref = $(this).attr("hash");
 			var icon = $(this).attr("parent_box");
 			
 			if ($(this).hasClass("color_box")) {
