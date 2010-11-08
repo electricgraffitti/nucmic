@@ -78,13 +78,13 @@ var scroll = {
 
 	nextTriggers: function() {
 		var nTrigger = $("#elements a.next_element_trigger");
-		nTrigger.live("click", function(e) {
+		nTrigger.live('click', function(e) {
 			var boxhref = $(this).attr("href");
 			var icon = $(this).attr("parent_box");
+			console.log(boxhref);
 			
-			e.preventDefault();
-			e.stopPropagation();
-
+			app.eventHandler(e);
+			
 			nav.setActiveIconNav(icon);
 			nav.setActiveSubNav(boxhref);
       scroll.setScroll(boxhref);
@@ -199,8 +199,8 @@ var scroll = {
 		
 	},
 	
-	setScroll: function(link) {
-		var el = $(link);
+	setScroll: function(l) {
+		var el = $(l);
 		
 		if (el.hasClass("flipped")) {
 			return false;
@@ -267,18 +267,15 @@ var video = {
 	liveVideoTrigger: function() {
 		var $trigger = $('.video_trigger');	
 		$trigger.live("click", function(e) {
-			e.preventDefault();
-			e.stopPropagation();
+			app.eventHandler(e);
 			video.triggerVideo($(this));
 		});
 	},
 	
 	regVideoTrigger: function() {
 		var $trigger = $("#elements #63 a.reg_video_trigger");
-		console.log($trigger);
 		$trigger.click(function(e) {
-			e.preventDefault();
-			e.stopPropagation();
+			app.eventHandler(e);
 		});
 	},
 	
@@ -327,6 +324,18 @@ var app = {
 	    $bd.css({width:$(this).width(), height:$(this).height() - 158 });
 	  });
 	 
+	},
+	
+	eventHandler: function(e) {
+		e.preventDefault();
+		
+	  if (!e)
+	    e = window.event;
+
+	  if (e.cancelBubble)
+	    e.cancelBubble = true;
+	  else
+	    e.stopPropagation();
 	},
 	
 	setTips: function() {
