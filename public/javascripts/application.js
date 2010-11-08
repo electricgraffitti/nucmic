@@ -274,11 +274,11 @@ var video = {
 	},
 	
 	regVideoTrigger: function() {
-		var $trigger = $(".reg_video_trigger");
-		$trigger.live("click", function(e) {
+		var $trigger = $("#elements #63 a.reg_video_trigger");
+		console.log($trigger);
+		$trigger.click(function(e) {
 			e.preventDefault();
 			e.stopPropagation();
-			video.triggerVideo($(this));
 		});
 	},
 	
@@ -304,7 +304,12 @@ var video = {
 		  player.unload();
 		 }
 		});
-	}	
+	},
+	
+	loadVideoTriggers: function() {
+		video.liveVideoTrigger();
+		video.regVideoTrigger();
+	}
 };
 
 var app = {
@@ -340,7 +345,7 @@ var app = {
     app.setTips();
 		app.formValidation();
 		scroll.loadTriggers();
-		video.liveVideoTrigger();
+		video.loadVideoTriggers();
 	}
 	
 };
