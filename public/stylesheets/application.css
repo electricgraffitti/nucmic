@@ -872,10 +872,16 @@ label.error {
 #elements #e12 .content_top_section {
 	width: 355px;
 }
+#elements #e13 .content_top_section {
+	width: 368px;
+}
 #elements #e14 .content_top_section {
 	width:367px;
 }
 #elements #e15 .content_top_section {
+	width:375px;
+}
+#elements #e16 .content_top_section {
 	width:375px;
 }
 #elements #e17 .content_top_section {
@@ -912,7 +918,7 @@ label.error {
 	width: 408px;
 }
 #elements #e60 .content_top_section {
-	width: 342px;
+	width: 430px;
 }
 /* Element back widths for Webkit (Safari and Chrome)  */
 @media screen and (-webkit-min-device-pixel-ratio:0) {

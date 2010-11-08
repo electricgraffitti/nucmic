@@ -65,13 +65,15 @@ var scroll = {
 	    var boxhref = $(this).attr("hash");
 			var icon = $(this).attr("parent_box");
 			
-			e.preventDefault();
-			e.stopPropagation();
-
-			nav.setActiveIconNav(icon);
-			nav.setActiveSubNav(boxhref);
-      scroll.setScroll(boxhref);
-
+			if ($(this).hasClass('reg_video_trigger')) {
+				app.eventHandler(e);
+				video.triggerVideo($(this));
+			} else {
+				app.eventHandler(e);
+				nav.setActiveIconNav(icon);
+				nav.setActiveSubNav(boxhref);
+	      scroll.setScroll(boxhref);
+			}
     });
     
   },
@@ -149,15 +151,6 @@ var scroll = {
 		
 	},
 	
-	videoBoxTriggers: function() {
-		var $triggers = $("#elements .element.solid_black a.reg_video_trigger");
-		$triggers.click(function(e) {
-			e.preventDefault();
-			e.stopPropagation();	
-			video.triggerVideo($(this));
-		});
-	},
-	
 	microTriggers: function() {
 		var $microLink = $('.micro_link');
 		
@@ -218,7 +211,6 @@ var scroll = {
 		scroll.elementTriggers();
 		scroll.nextTriggers();
 		scroll.elementBackDemoTriggers();
-		scroll.videoBoxTriggers();
   }
   
 };
@@ -270,21 +262,9 @@ var video = {
 		});
 	},
 	
-	regVideoTrigger: function() {
-		var rTrigger = $(".reg_video_trigger");
-		rTrigger.bind('click', function(e) {
-			e.stopPropagation();
-			// app.eventHandler(e);
-			console.log($(this));
-		});
-	},
-	
-	subNavVideoTrigger: function(el) {
-		video.triggerVideo(el);
-	},
-	
 	triggerVideo: function(el) {
-		el.overlay({ 
+				
+		el.overlay({	 
 		 expose: {
 		  color: '#000',
 		  opacity: 0.85,
@@ -293,6 +273,7 @@ var video = {
 
 		 onLoad: function() {
 		  var v = this.getTrigger().attr("href");
+			console.log(v);
 		 	player.load().play(v);
 		 },
 
@@ -305,7 +286,6 @@ var video = {
 	
 	loadVideoTriggers: function() {
 		video.liveVideoTrigger();
-		video.regVideoTrigger();
 	}
 };
 
@@ -328,7 +308,6 @@ var app = {
 	
 	eventHandler: function(e) {
 		e.preventDefault();
-		
 	  if (!e)
 	    e = window.event;
 
