@@ -65,5 +65,8 @@
 	width: 349px;
 }
 #elements .element h2 {
-	height: 246px;
+	float: left;
+}
+#elements .element .element_front {
+
 }
