@@ -502,10 +502,10 @@ label.error {
 #elements .element.solid_yellow {
   background: #f7b219;
 }
-#elements .element.solid_black {
+/*#elements .element.solid_black {
   background: #000;
   color: #fff;
-}
+}*/
 #elements .element.solid_black p {
   color: #fff;
 }
