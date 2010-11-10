@@ -9,9 +9,9 @@ class ApplicationController < ActionController::Base
     
     def green_video
       if ipad
-        video = "http://dl.dropbox.com/u/3105141/HCICDN/videos/meet_nucleus.mp4"
+        video = "/videos/meet_nucleus.mp4"
       else
-        video = "http://dl.dropbox.com/u/3105141/HCICDN/videos/meet_nucleus.f4v"
+        video = "/videos/meet_nucleus.f4v"
       end
     end
     
