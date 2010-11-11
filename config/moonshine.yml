@@ -15,7 +15,7 @@
   - micro.get-nucleus.com
 
 :repository: git@github.com:electricgraffitti/nucmic.git
-:branch: master
+:branch: no-video
 
 # Use :app_symlinks to setup directories under public/ that you want to persist
 # across deployments. They'll be symlinked to the shared directory.
