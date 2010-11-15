@@ -9,9 +9,9 @@ class ApplicationController < ActionController::Base
     
     def green_video
       if ipad
-        video = "/videos/meet_nucleus.mp4"
+        video = "/videos/core_elements.mp4"
       else
-        video = "/videos/meet_nucleus.f4v"
+        video = "/videos/core_elements.mp4"
       end
     end
     
