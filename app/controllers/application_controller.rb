@@ -31,7 +31,7 @@ class ApplicationController < ActionController::Base
     
     def main_video
       if ipad
-        video = "/videos/nucleus_teaser.f4v"
+        video = "/videos/nucleus_teaser_ipad.mp4"
       else
         video = "/videos/nucleus_teaser.f4v"
       end
@@ -39,7 +39,7 @@ class ApplicationController < ActionController::Base
     
     def red_video
       if ipad
-        video = "/videos/nucleus_1.f4v"
+        video = "/videos/nucleus_1_ipad.mp4"
       else
         video = "/videos/nucleus_1.f4v"
       end
@@ -47,7 +47,7 @@ class ApplicationController < ActionController::Base
     
     def blue_video
       if ipad
-        video = "/videos/nucleus_2.f4v"
+        video = "/videos/nucleus_2_ipad.mp4"
       else
         video = "/videos/nucleus_2.f4v"
       end
@@ -55,7 +55,7 @@ class ApplicationController < ActionController::Base
     
     def yellow_video
       if ipad
-        video = "/videos/nucleus_3.f4v"
+        video = "/videos/nucleus_3_ipad.mp4"
       else
         video = "/videos/nucleus_3.f4v"
       end
@@ -63,7 +63,7 @@ class ApplicationController < ActionController::Base
     
     def green_video
       if ipad
-        video = "/videos/nucleus_4.f4v"
+        video = "/videos/nucleus_4_ipad.mp4"
       else
         video = "/videos/nucleus_4.f4v"
       end
