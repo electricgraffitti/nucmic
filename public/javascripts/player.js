@@ -68,7 +68,7 @@ $(document).ready(function() {
 
 	    clip: {
 	      // url: "/videos/4/original/brian_fox_073109.f4v?1260914724",
-	   		autoPlay: false,
+	   		autoPlay: true,
 	   		autoBuffering: true,
 	   		fadeInSpeed: 5000,
 	   		scaling: "orig",

@@ -273,7 +273,6 @@ var video = {
 
 		 onLoad: function() {
 		  var v = this.getTrigger().attr("href");
-			console.log(v);
 		 	player.load().play(v);
 		 },
 
