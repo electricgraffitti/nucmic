@@ -6,7 +6,6 @@ class ApplicationController < ActionController::Base
   helper_method :super?, :super_admin, :ipad, :box_video
   filter_parameter_logging :password, :password_confirmation
     
-    
     def box_video(box_type)
       case box_type
         when "green_video"
@@ -25,8 +24,8 @@ class ApplicationController < ActionController::Base
     private
     
     def ipad
-      # request.user_agent =~ /iPad/i || request.user_agent =~ /iPhone/i
-      request.user_agent =~ /(Mobile\/.+Safari)/      
+      request.user_agent =~ /iPad/i || request.user_agent =~ /iPhone/i
+      # request.user_agent =~ /(Mobile\/.+Safari)/      
     end
     
     def main_video
