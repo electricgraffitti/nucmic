@@ -1380,20 +1380,31 @@ div.overlay a.close {
   position: relative;
   float: left;
   padding:20px;
-  width:795px;
+  width:440px;
+  height: 150px;
   overflow: hidden;
-  background: #29272c url(../images/tutorials/main_bg.png) 0px 0px repeat-x;
+  background: #29272c url(../images/nucleus_modal_logo.png) bottom right no-repeat;
 }
 .tutorial_header {
   background:none repeat scroll 0 0 #FFFFFF;
   float:left;
   margin:10px;
   position:relative;
-  width:835px;
+  width:480px;
+}
+.modal_claim_wrap h2 {
+  font-size: 18px;
+  margin-top:30px;
+  margin-bottom: 10px;
+  width: 75%;
+}
+.modal_claim_wrap p {
+  font-size: 14px;
+  width: 56%;
 }
 div.coming_soon { 
   position: relative;
-  width:855px;
+  width:500px;
   background:none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
   display:none; 
   padding: 0 !important;
