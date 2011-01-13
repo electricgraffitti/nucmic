@@ -87,7 +87,7 @@
 <% content_for :javascripts do %>
   <script type="text/javascript" charset="utf-8">
     $(document).ready(function() {
-      <% if @pardot == true %>
+      <% if @pardot == "true" %>
         app.launchFormThankYouModal();
       <% end %>
       app.loadCoreFunctions();

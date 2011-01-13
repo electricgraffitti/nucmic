@@ -2,7 +2,7 @@ class NucleusController < ApplicationController
   
   def index
     
-    if params["pardot"]      
+    if params["pardot"]   
       @pardot = params["pardot"]
     end
     

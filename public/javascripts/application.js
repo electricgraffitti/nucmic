@@ -336,7 +336,6 @@ var app = {
 	},
 	
 	launchFormThankYouModal: function() {
-	  alert("Thank You");
 	  $("#coming_soon").overlay({
 
     	// custom top position
