@@ -54,22 +54,22 @@ a:hover {
 	color: #d93b27;
 }
 .pci {
-	color:#00853f;
+	color:#72bf44;
 }
 .dci {
-	color:#009fc2;
+	color:#00a1e4;
 }
 .fci {
-	color:#98002e;
+	color:#ef4223;
 }
 .oci {
-	color:#e5b53a;
+	color:#f99d28;
 }
 .rxi {
-	color:#00467f;
+	color:#044ba0;
 }
 .cti {
-	color:#78496a;
+	color:#bc60a4;
 }
 /***Firefox dotted line tweak***/
 a, button {
@@ -494,22 +494,22 @@ label.error {
   color: #000;
 }
 #elements .element.solid_hci_green.flipped .element_front h3 {
-  color: #00853f;
+  color: #72bf44;
 }
 #elements .element.solid_hci_red.flipped .element_front h3 {
-  color: #98002e;
+  color: #ef4223;
 }
 #elements .element.solid_hci_blue.flipped .element_front h3 {
-  color: #009fc2;
+  color: #00a1e4;
 }
 #elements .element.solid_hci_yellow.flipped .element_front h3 {
-  color: #e5b53a;
+  color: #f99d28;
 }
 #elements .element.solid_hci_dark_blue.flipped .element_front h3 {
-  color: #00467f;
+  color: #044ba0;
 }
 #elements .element.solid_hci_purple.flipped .element_front h3 {
-  color: #78496a;
+  color: #bc60a4;
 }
 #elements .element.green.flipped .content_right a {
   color: #5bab46;
@@ -566,58 +566,58 @@ label.error {
   border-right: 1px solid #fff;
 }
 #elements .element.solid_hci_green .content_right a {
-  color: #00853e;
+  color: #72bf44;
 }
 #elements .element.solid_hci_green .content_right a:hover {
   color: #666;
 }
 #elements .element.solid_hci_blue .content_right a {
-  color: #009fc3;
+  color: #00a1e4;
 }
 #elements .element.solid_hci_blue .content_right a:hover {
   color: #666;
 }
 #elements .element.solid_hci_yellow .content_right a {
-  color: #e4b43a;
+  color: #f99d28;
 }
 #elements .element.solid_hci_yellow .content_right a:hover {
   color: #666;
 }
 #elements .element.solid_hci_red .content_right a {
-  color: #98012e;
+  color: #ef4223;
 }
 #elements .element.solid_hci_red .content_right a:hover {
   color: #666;
 }
 #elements .element.solid_hci_dark_blue .content_right a {
-  color: #00467f;
+  color: #044ba0;
 }
 #elements .element.solid_hci_dark_blue .content_right a:hover {
   color: #666;
 }
 #elements .element.solid_hci_purple .content_right a {
-  color: #78496a;
+  color: #bc60a4;
 }
 #elements .element.solid_hci_purple .content_right a:hover {
   color: #666;
 }
 #elements .element.solid_hci_green.flipped .content_left {
-  border-right: 1px solid #00853e;
+  border-right: 1px solid #72bf44;
 }
 #elements .element.solid_hci_blue.flipped .content_left {
-  border-right: 1px solid #009fc3;
+  border-right: 1px solid #00a1e4;
 }
 #elements .element.solid_hci_yellow.flipped .content_left {
-  border-right: 1px solid #e4b43a;
+  border-right: 1px solid #f99d28;
 }
 #elements .element.solid_hci_red.flipped .content_left {
-  border-right: 1px solid #98012e;
+  border-right: 1px solid #ef4223;
 }
 #elements .element.solid_hci_dark_blue.flipped .content_left {
-  border-right: 1px solid #00467f;
+  border-right: 1px solid #044ba0;
 }
 #elements .element.solid_hci_purple.flipped .content_left {
-  border-right: 1px solid #78496a;
+  border-right: 1px solid #bc60a4;
 }
 #elements .element h2 {
   font-size:200px;
@@ -687,22 +687,22 @@ label.error {
   background: #1a1a1a;
 }
 #elements .element.solid_hci_green .element_front {
- background: #00853e; 
+ background: #72bf44; 
 }
 #elements .element.solid_hci_red .element_front {
- background: #98012e; 
+ background: #ef4223; 
 }
 #elements .element.solid_hci_blue .element_front {
- background: #009fc3; 
+ background: #00a1e4; 
 }
 #elements .element.solid_hci_yellow .element_front {
- background: #e4b43a; 
+ background: #f99d28; 
 }
 #elements .element.solid_hci_dark_blue .element_front {
- background: #00467f; 
+ background: #044ba0; 
 }
 #elements .element.solid_hci_purple .element_front {
- background: #78496a; 
+ background: #bc60a4; 
 }
 .graphic_top {
   position: relative;
@@ -1141,27 +1141,27 @@ label.error {
 	color: #000;
 }
 #micro_elements .micro_element.solid_hci_green {
- 	background: #00853e;
+ 	background: #72bf44;
 	color: #fff;
 }
 #micro_elements .micro_element.solid_hci_red {
- 	background: #98012e;
+ 	background: #ef4223;
 	color: #fff;
 }
 #micro_elements .micro_element.solid_hci_blue {
- 	background: #009fc3; 
+ 	background: #00a1e4; 
 	color: #fff;
 }
 #micro_elements .micro_element.solid_hci_yellow {
- 	background: #e4b43a; 
+ 	background: #f99d28; 
 	color: #fff;
 }
 #micro_elements .micro_element.solid_hci_dark_blue {
- 	background: #00467f; 
+ 	background: #044ba0; 
 	color: #fff;
 }
 #micro_elements .micro_element.solid_hci_purple {
- 	background: #78496a;
+ 	background: #bc60a4;
 	color: #fff;
 }
 
