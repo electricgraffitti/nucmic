@@ -386,7 +386,7 @@ label.error {
   float:left;
   margin:10px 20px 10px 0;
 }
-#form_content #pardot_form input[type="text"] {
+#form_content #pardot_form input[type="text"], #form_content #pardot_form input[type="email"] {
 	width: 224px;
 	padding: 3px;
 }
