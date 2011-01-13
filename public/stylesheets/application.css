@@ -1369,3 +1369,44 @@ div.overlay a.close {
 	font-size:15px; 
 	margin:0 0 -10px 0; 
 }
+/***********************************************************************************************************************/
+/*************************************************************************************** COMING SOON MODALS ************/
+.contentWrap {
+  position: relative;
+  float: left;
+  text-align: left;
+}
+.modal_claim_wrap {
+  position: relative;
+  float: left;
+  padding:20px;
+  width:795px;
+  overflow: hidden;
+  background: #29272c url(../images/tutorials/main_bg.png) 0px 0px repeat-x;
+}
+.tutorial_header {
+  background:none repeat scroll 0 0 #FFFFFF;
+  float:left;
+  margin:10px;
+  position:relative;
+  width:835px;
+}
+div.coming_soon { 
+  position: relative;
+  width:855px;
+  background:none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
+  display:none; 
+  padding: 0 !important;
+}
+div.coming_soon div.close { 
+    background:url("../images/overlay/apple-close.png") no-repeat scroll 0 0 transparent;
+    cursor:pointer;
+    height:38px;
+    position:absolute;
+  /*  right:-12px;
+    top:-10px;*/
+    right:0;
+    top:22px;
+    width:38px;
+    z-index:10;
+}

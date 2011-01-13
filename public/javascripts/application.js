@@ -1,3 +1,6 @@
+/*jslint white: false, onevar: false, browser: true, devel: true, undef: true, nomen: true, laxbreak: true, eqeqeq: true, plusplus: true, bitwise: true, regexp: true, strict: false, newcap: true, immed: true, laxbreak: true */
+/*global jQuery, $, Raphael */
+
 var nav = {
 	
 	resetActive: function() {
@@ -323,7 +326,35 @@ var app = {
 	},
 	
 	formValidation: function() {
-	  $('#pf').ketchup();
+	  $('#pf')
+	    .bind('formIsValid', function(event, form) {
+        //do whatever when the form is valid
+        //form - the form that is valid (jQuery Object)
+        app.launchFormThankYouModal();
+      })
+      .ketchup();
+	},
+	
+	launchFormThankYouModal: function() {
+	  alert("Thank You");
+	  $("#coming_soon").overlay({
+
+    	// custom top position
+    	top: 260,
+
+      expose: {
+ 		  color: '#000',
+ 		  opacity: 0.85,
+ 		  closeSpeed: 700
+ 		 },
+
+    	// disable this for modal dialog-type of overlays
+    	closeOnClick: false,
+
+    	// load it immediately after the construction
+    	load: true
+
+    });
 	},
 	
 	loadCoreFunctions: function() {
