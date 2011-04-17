@@ -53,4 +53,4 @@
   :use_global_queue: true
   :version: 2.2.15
 :mysql:
-  :innodb_buffer_pool_size: 128M
+  :innodb_buffer_pool_size: 32M
