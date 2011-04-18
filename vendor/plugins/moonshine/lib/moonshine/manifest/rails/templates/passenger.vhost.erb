@@ -16,6 +16,7 @@
     AllowOverride <%= if configuration[:apache]; configuration[:apache][:allow_override] || 'None'; else 'None'; end %>
     Order allow,deny
     Allow from all
+    <%= "FileETag #{configuration[:apache][:file_etag]}" if configuration[:apache][:file_etag] %>
   </Directory>
 
   <% if configuration[:apache ] && (configuration[:apache][:users] || configuration[:apache][:allow] || configuration[:apache][:deny]) %>
@@ -69,6 +70,8 @@
   # RailsBaseURI <uri>
   <% end %>
 
+
+  <% if configuration[:passenger][:allow_mod_rewrite] %>
   ## RailsAllowModRewrite
   #
   # Passenger will not override mod_rewrite rules if this option
@@ -77,6 +80,9 @@
   # Options: <on|off>
 
   RailsAllowModRewrite <%= passenger_config_boolean(configuration[:passenger][:allow_mod_rewrite]) %>
+  <% else %>
+  # RailsAllowModRewrite is deprecated. Passenger supports mod_rewrite by default now. configure(:passenger => { :allow_mod_rewrite => true/false }) if you still wish to use it.
+  <% end %>
 
   ## RackEnv
   #
@@ -121,14 +127,20 @@
 
   <%= configuration[:passenger][:vhost_extra] %>
 
-  # Prevent access to .git directories
-  RewriteRule ^(.*/)?\.git/ - [F,L]
+<% if configuration[:scm].to_s == 'subversion' %>
+  # Prevent access to svn metadata
+  RewriteRule ^(.*/)?\.svn/ - [F,L]
   ErrorDocument 403 "Access Forbidden"
+<% end %>
 
+<% if configuration[:passenger][:maintenance_rewrite] %>
+	<%= configuration[:passenger][:maintenance_rewrite] %>
+<% else %>
   # Check for maintenance file and redirect all requests
   RewriteCond %{REQUEST_URI} !\.(css|jpg|png|gif)$
   RewriteCond %{DOCUMENT_ROOT}/system/maintenance.html -f
   RewriteRule ^.*$ /system/maintenance.html [L]
+<% end %>
 
   # Rewrite index to check for static
   RewriteCond  %{THE_REQUEST} ^(GET|HEAD)
@@ -178,6 +190,7 @@
     AllowOverride None
     Order allow,deny
     Allow from all
+    <%= "FileETag #{configuration[:apache][:file_etag]}" if configuration[:apache][:file_etag] %>
   </Directory>
 
   <% if configuration[:apache ] and (configuration[:apache][:users] || configuration[:apache][:allow] || configuration[:apache][:deny]) %>
@@ -231,6 +244,7 @@
   # RailsBaseURI <uri>
   <% end %>
 
+  <% if configuration[:passenger][:allow_mod_rewrite] %>
   ## RailsAllowModRewrite
   #
   # Passenger will not override mod_rewrite rules if this option
@@ -239,6 +253,9 @@
   # Options: <on|off>
 
   RailsAllowModRewrite <%= passenger_config_boolean(configuration[:passenger][:allow_mod_rewrite]) %>
+  <% else %>
+  # RailsAllowModRewrite is deprecated. Passenger supports mod_rewrite by default now. configure(:passenger => { :allow_mod_rewrite => true/false }) if you still wish to use it.
+  <% end %>
 
   ## RailsEnv
   #
@@ -280,14 +297,20 @@
   <%= configuration[:passenger][:vhost_extra] %>
 <% end %>
 
-  # Prevent access to .git directories
-  RewriteRule ^(.*/)?\.git/ - [F,L]
+<% if configuration[:scm].to_s == 'subversion' %>
+  # Prevent access to svn metadata
+  RewriteRule ^(.*/)?\.svn/ - [F,L]
   ErrorDocument 403 "Access Forbidden"
+<% end %>
 
+<% if configuration[:passenger][:maintenance_rewrite] %>
+	<%= configuration[:passenger][:maintenance_rewrite] %>
+<% else %>
   # Check for maintenance file and redirect all requests
   RewriteCond %{REQUEST_URI} !\.(css|jpg|png|gif)$
   RewriteCond %{DOCUMENT_ROOT}/system/maintenance.html -f
   RewriteRule ^.*$ /system/maintenance.html [L]
+<% end %>
 
   # Rewrite index to check for static
   RewriteCond  %{THE_REQUEST} ^(GET|HEAD)
