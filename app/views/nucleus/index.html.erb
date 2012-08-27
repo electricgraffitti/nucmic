@@ -22,27 +22,27 @@
          See Nucleus in the Flesh - Request a Demo
         </p>
         <div id="pardot_form">
-          <%= form_tag("http://www2.hcinsight.com/l/1492/2010-11-04/IWS2V", :id => "pf", :method => "post") do %>
+          <%= form_tag("http://success.veriskhealth.com/acton/eform/2131/004d/d-ext-0001", :id => "pf", :method => "post") do %>
          
             <div class="form_field">
               <%= label_tag(:first_name, "First Name") %><br/>
-              <%= text_field_tag(:first_name, nil , :class => "validate(required)", :placeholder => "First Name") %>
+              <%= text_field_tag(:first_name, nil , :name => "First Name", :class => "validate(required)", :placeholder => "First Name") %>
             </div>
             <div class="form_field">
               <%= label_tag(:last_name, "Last Name") %><br/>
-              <%= text_field_tag(:last_name, nil ,:class => "validate(required)") %>
+              <%= text_field_tag(:last_name, nil , :name => "Last Name", :class => "validate(required)") %>
             </div>
             <div class="form_field">
               <%= label_tag(:title, "Title/Responsibility") %><br/>
-              <%= text_field_tag(:title, nil ,:class => "validate(required)") %>
+              <%= text_field_tag(:title, nil , :name => "Job Title", :class => "validate(required)") %>
             </div>
             <div class="form_field">
               <%= label_tag(:email, "Email") %><br/>
-              <%= email_field_tag(:email, nil ,:class => "validate(required, email)") %>
+              <%= email_field_tag(:email, nil , :name => "E-mail Address", :class => "validate(required, email)") %>
             </div>
             <div class="form_field">
               <%= label_tag(:company, "Company") %><br/>
-              <%= text_field_tag(:company, nil ,:class => "validate(required)") %>
+              <%= text_field_tag(:company, nil , :name => "Company", :class => "validate(required)") %>
             </div>
             <div class="form_field">
               <%= submit_tag("Request a Demo") %>
@@ -87,7 +87,7 @@
 <% content_for :javascripts do %>
   <script type="text/javascript" charset="utf-8">
     $(document).ready(function() {
-      <% if @pardot == "true" %>
+      <% if @thankyou == "true" %>
         app.launchFormThankYouModal();
       <% end %>
       app.loadCoreFunctions();
