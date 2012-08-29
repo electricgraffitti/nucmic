@@ -801,6 +801,7 @@ label.error {
   margin: 0px;
   font-size: 14px;
   color: #000;
+	width: 390px;
 }
 .content_right {
   position: relative;
